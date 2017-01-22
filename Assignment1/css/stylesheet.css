@@ -1,3 +1,78 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,300,600,800,400);
+
+/* --- References --- 
+
+
+
+*/
+
 body {
-	font-family: serif;
+	font-family: 'Open Sans', sans-serif;
+	margin: 0px;
+}
+
+.header-fixed {
+	display: table;
+	position: fixed;
+	width:100%;
+	background-color: red;
+	border-bottom: 1px solid #888;
+}
+
+.logo {
+	padding-left: 100px;
+	width: 10%;
+	display: table-cell;
+	vertical-align: middle;
+	line-height: 0;
+}
+
+.logo img  {
+	height: auto;
+	max-width: 200px;
+	min-width: 150px;
+}
+
+.menu {
+	padding-right: 100px;
+	width: 90%;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: right;
+}
+
+.menu ul {
+	background-color: blue;
+
+}
+
+.menu li {
+	display: inline-block;
+	background-color: green;
+}
+
+.menu a {
+	text-decoration: none;
+	color: black;
+	width: 100px;
+	height: 35px;
+	background-color: yellow;
+	display: block;
+	transition: .3s background-color;
+}
+
+.menu a:hover {
+	background-color: #005f5f;
+}
+ 
+.menu  a.active {
+	color: red;
+	background-color: pink;
+}
+ 
+
+.content {
+	padding: 100px;
+	padding-top: 125px;
+	padding-bottom: 25px;
 }
