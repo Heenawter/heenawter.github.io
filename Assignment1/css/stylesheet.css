@@ -1,12 +1,16 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:700,300,600,800,400);
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+
 
 /* --- References --- 
-
+	https://coolors.co/5d737e-fcfcfc-02111b-000000-b5e61d
 
 
 */
 
 body {
+	background-color: #fcfcfc;
+	color: #02111b;
 	font-family: 'Open Sans', sans-serif;
 	margin: 0px;
 }
@@ -15,59 +19,57 @@ body {
 	display: table;
 	position: fixed;
 	width:100%;
-	background-color: red;
-	border-bottom: 1px solid #888;
+	height: 50px;
+	background-color: #5d737e;
 }
 
 .logo {
 	padding-left: 100px;
-	width: 10%;
 	display: table-cell;
+	width: 200px;
 	vertical-align: middle;
 	line-height: 0;
 }
 
 .logo img  {
+	width: 100%;
 	height: auto;
-	max-width: 200px;
 	min-width: 150px;
 }
 
 .menu {
 	padding-right: 100px;
-	width: 90%;
-	display: table-cell;
-	vertical-align: middle;
-	text-align: right;
 }
 
 .menu ul {
-	background-color: blue;
 
 }
 
+
 .menu li {
-	display: inline-block;
-	background-color: green;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: left;
+	padding: 10px;
+	padding-right: 20px;
 }
 
 .menu a {
+	font-family: 'Quicksand';
+	font-style: bold;
+	font-size: 2em;
+
 	text-decoration: none;
-	color: black;
-	width: 100px;
-	height: 35px;
-	background-color: yellow;
-	display: block;
-	transition: .3s background-color;
+	color: #02111b;
+	transition: .3s color;
 }
 
 .menu a:hover {
-	background-color: #005f5f;
+	color: #B5E61D;
 }
  
 .menu  a.active {
-	color: red;
-	background-color: pink;
+	color: white;
 }
  
 
