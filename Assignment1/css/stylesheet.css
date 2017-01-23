@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,300,600,800,400);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 @import url(https://fonts.googleapis.com/css?family=Quicksand);
 
 
@@ -9,7 +9,7 @@
 */
 
 body {
-	background-color: #fcfcfc;
+	background-color: #ffffff;
 	color: #02111b;
 	font-family: 'Open Sans', sans-serif;
 	margin: 0px;
@@ -19,14 +19,13 @@ body {
 	display: table;
 	position: fixed;
 	width:100%;
-	height: 50px;
 	background-color: #5d737e;
 }
 
 .logo {
 	padding-left: 100px;
 	display: table-cell;
-	width: 200px;
+	width: 300px;
 	vertical-align: middle;
 	line-height: 0;
 }
@@ -34,17 +33,12 @@ body {
 .logo img  {
 	width: 100%;
 	height: auto;
-	min-width: 150px;
+	min-width: 250px;
 }
 
 .menu {
 	padding-right: 100px;
 }
-
-.menu ul {
-
-}
-
 
 .menu li {
 	display: table-cell;
@@ -55,7 +49,7 @@ body {
 }
 
 .menu a {
-	font-family: 'Quicksand';
+	font-family: 'Quicksand', sans-serif;
 	font-style: bold;
 	font-size: 2em;
 
@@ -71,10 +65,71 @@ body {
 .menu  a.active {
 	color: white;
 }
- 
+
+#menu-label {
+	display: none;
+}
 
 .content {
 	padding: 100px;
 	padding-top: 125px;
 	padding-bottom: 25px;
+}
+
+/* source: http://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+/* ------------------------------------------------------------> */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+@media only screen and (max-width: 1020px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+/* <------------------------------------------------------------ */
+
+
+@media only screen and (max-width: 1020px) {
+	.header-fixed, .logo, .menu { 
+		display: block;
+				margin-left: auto;
+		margin-right: auto
+	}
+	
+	.logo {
+		padding: 0px;
+		margin-left: auto;
+		margin-right: auto
+	}
+	
+	.menu {
+		padding: 0px;
+		text-align: center;
+	}
+	
+	.menu li {
+		display: inline-block;
+		padding: 0px;
+		padding-right: 20px;
+	}
+
+	.menu a {
+		font-size: 1.5em;
+	}
 }
