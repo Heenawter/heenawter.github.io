@@ -67,10 +67,6 @@ body {
 	color: white;
 }
 
-#menu-label {
-	display: none;
-}
-
 .content {
 	padding: 100px;
 	padding-top: 125px;
@@ -132,5 +128,12 @@ body {
 
 	.menu a {
 		font-size: 1.5em;
+	}
+
+	.content{
+			padding: 50px;
+			padding-top: 140px;
+			padding-bottom: 25px;
+			padding-right: 75px;
 	}
 }
