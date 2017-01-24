@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Quicksand);
 
 
-/* --- References --- 
+/* --- References ---
 	https://coolors.co/5d737e-fcfcfc-02111b-000000-b5e61d
 
 
@@ -31,6 +31,7 @@ body {
 }
 
 .logo img  {
+	margin: auto;
 	width: 100%;
 	height: auto;
 	min-width: 250px;
@@ -61,7 +62,7 @@ body {
 .menu a:hover {
 	color: #B5E61D;
 }
- 
+
 .menu  a.active {
 	color: white;
 }
@@ -106,23 +107,23 @@ body {
 
 
 @media only screen and (max-width: 1020px) {
-	.header-fixed, .logo, .menu { 
+	.header-fixed, .logo, .menu {
 		display: block;
 				margin-left: auto;
 		margin-right: auto
 	}
-	
+
 	.logo {
 		padding: 0px;
 		margin-left: auto;
 		margin-right: auto
 	}
-	
+
 	.menu {
 		padding: 0px;
 		text-align: center;
 	}
-	
+
 	.menu li {
 		display: inline-block;
 		padding: 0px;
