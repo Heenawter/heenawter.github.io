@@ -2,15 +2,35 @@
 @import url(https://fonts.googleapis.com/css?family=Quicksand:400,700);
 
 
-/* --- References ---
-	https://coolors.co/526478-fcfcfc-02111b-000000-b5e61d
-*/
+
+/*******************************************************/
+/*				  	 Main Styles					   */
+/*******************************************************/
 
 body {
 	color: #02111b;
 	font-family: 'Raleway', sans-serif;
 	margin: 0 auto
 }
+
+h1 {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 3em;
+	margin-bottom: 10px;
+	margin-top: 0px;
+	text-align: center;
+}
+
+h2  {
+	margin-top: 0px;
+	text-align: center;
+}
+
+.emph {
+	color: #B5E61D;
+	font-weight: bold;
+}
+
 
 /*******************************************************/
 /*					   	 Header 					   */
@@ -100,26 +120,9 @@ body {
 	margin: auto;
 
 }
-
-h1 {
-	font-family: 'Quicksand', sans-serif;
-	font-size: 3em;
-	margin-bottom: 10px;
-	margin-top: 0px;
-	text-align: center;
+.col-2 {
+	margin-right: 35px;
 }
-
-h2  {
-	margin-top: 0px;
-	
-	text-align: center;
-}
-
-.emph {
-	color: #B5E61D;
-	font-weight: bold;
-}
-
 
 /*******************************************************/
 /*						Content 					   */
@@ -130,16 +133,12 @@ h2  {
 	padding-bottom: 25px;
 }
 
-.header img { 
-	float: left;
-}
 
 /********************** Images *********************/
 
 img {
 	max-width: 100%;
 }
-
 
 
 /********************** List *********************/
