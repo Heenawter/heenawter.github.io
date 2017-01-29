@@ -249,13 +249,19 @@ td:first-child {
 		background-image: none;
 		background-color: #23374d;
 	}
+	
+	.page-icon {
+		max-width: 30%;
+		min-width: 150px;
+		float: left;
+	}
 
 	.header-fixed, .logo, .menu {
 		display: block;
 				margin-left: auto;
 		margin-right: auto
 	}
-
+	
 	.logo {
 		padding: 0px;
 		margin-left: auto;
