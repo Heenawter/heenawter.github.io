@@ -4,23 +4,27 @@
 
 /* --- References ---
 	https://coolors.co/5d737e-fcfcfc-02111b-000000-b5e61d
-
-
 */
 
 body {
 	background-color: #ffffff;
 	color: #02111b;
 	font-family: 'Open Sans', sans-serif;
-	margin: 0px;
+	margin: 0 auto;
 }
+
+/*******************************************************/
+/*					   	 Header 					   */
+/*******************************************************/
 
 .header-fixed {
 	display: table;
 	position: fixed;
 	width:100%;
-	background-color: #5d737e;
+	background-color: #02111b;
 }
+
+/********************** Logo *********************/
 
 .logo {
 	padding-left: 100px;
@@ -36,6 +40,8 @@ body {
 	height: auto;
 	min-width: 250px;
 }
+
+/********************** Navigation Menu *********************/
 
 .menu {
 	padding-right: 100px;
@@ -55,7 +61,7 @@ body {
 	font-size: 2em;
 
 	text-decoration: none;
-	color: #02111b;
+	color: #5d737e;
 	transition: .3s color;
 }
 
@@ -67,11 +73,93 @@ body {
 	color: white;
 }
 
+
+/*******************************************************/
+/*						Content 					   */
+/*******************************************************/
+
 .content {
-	padding: 100px;
-	padding-top: 125px;
+	padding: 135px;
+	padding-top: 100px;
 	padding-bottom: 25px;
 }
+
+.sub-header {
+	width: 100%;
+	display: block;
+}
+
+.header img { 
+	float: left;
+}
+
+/********************** Images *********************/
+
+img {
+	max-width: 100%;
+}
+
+/********************** List *********************/
+ul {
+	color: #02111b;
+}
+
+/*******************************************************/
+/*					     Table						   */
+/*******************************************************/
+
+table {
+     border-collapse: collapse;
+	 text-align: left;
+	 width: 100%;
+}
+
+td, th {
+	padding: 5px 5px;
+}
+
+/********************** Header *********************/
+
+th {
+	background-color: #5D737E;
+	font-size: 16px;
+	font-weight: bold;
+	vertical-align: middle;
+	text-align: center;
+}
+
+th:first-child {
+	border: none;
+}
+
+/********************* Rows *********************/
+
+tr:nth-child(even) {
+    background: #DAE6ED;
+}
+
+tr:first-child {
+	border-top: 1px solid #02111b;
+}
+
+tr:last-child{
+	border-bottom: 1px solid #02111b;
+}
+
+/********************* Data *********************/
+
+td {
+	border-left: 1px solid #5D737E;
+}
+
+td:first-child {
+	border-left: none;
+}
+
+
+/*******************************************************/
+/*						  Columns				       */
+/*******************************************************/
 
 /* source: http://www.w3schools.com/css/css_rwd_mediaqueries.asp */
 /* ------------------------------------------------------------> */
@@ -101,6 +189,9 @@ body {
 }
 /* <------------------------------------------------------------ */
 
+/*******************************************************/
+/*			      		Media Queries				   */
+/*******************************************************/
 
 @media only screen and (max-width: 1020px) {
 	.header-fixed, .logo, .menu {
@@ -135,5 +226,6 @@ body {
 			padding-top: 140px;
 			padding-bottom: 25px;
 			padding-right: 75px;
+			margin: auto;
 	}
 }
