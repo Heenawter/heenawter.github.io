@@ -17,7 +17,7 @@ function getStats(txt) {
         maxLineLength: maxLineLength(txt),
         palindromes: palindromes(txt),
         longestWords: longestWords(txt),
-        mostFrequentWords: [ "hello(7)", "world(1)" ]
+        mostFrequentWords: mostFrequentWords(txt)
     };
 }
 
@@ -96,7 +96,8 @@ function palindromes(txt) {
 
 // reference: http://www.w3schools.com/jsref/jsref_sort.asp
 function longestWords(txt) {
-    let words = getWords(txt).sort().reverse();
+    // sort words by length
+    let words = getWords(txt).sort(); // .reverse()
     let uniqueWords = removeDuplicates(words);
     let sorted = uniqueWords.sort(function(a,b){return b.length - a.length});
   //  console.log("Sorted: ", sorted);
@@ -106,4 +107,24 @@ function longestWords(txt) {
 
 function mostFrequentWords(txt) {
     // sort words by frequency
+    let words = getWords(txt).sort();
+    let uniqueWords = removeDuplicates(words);
+    let counts = [];
+
+    let j = 0;
+    let count = 0;
+    for(let i = 0; i < uniqueWords.length; i++) {
+        while(words[j] === uniqueWords[i]) {
+            j++;
+            count++;
+        }
+        counts.push({ word: uniqueWords[i], count: count });
+        count = 0;
+    }
+
+    let sorted = counts.sort(function(a,b){return b.count - a.count});
+    let sorted2 = sorted.map(function(a){return a.word + "(" + a.count + ")"});
+    console.log("counts: ", sorted2);
+
+    return sorted2;
 }
