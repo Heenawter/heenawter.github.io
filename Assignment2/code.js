@@ -70,15 +70,24 @@ function maxLineLength(txt) {
     return max;
 }
 
+function removeDuplicates(words) {
+    let uniqueWords = [];
+    for(let word of words) {
+        if(uniqueWords.indexOf(word) === -1)
+            uniqueWords.push(word);
+    }
+    return uniqueWords;
+}
+
 function palindromes(txt) {
     let words = getWords(txt);
+    let uniqueWords = removeDuplicates(words);
     let palindromes = [];
-    for(let i = 0; i < words.length; i++) {
-        let word = words[i];
+    for(let i = 0; i < uniqueWords.length; i++) {
+        let word = uniqueWords[i];
         if(word.length > 2) {
             let reversedWord = word.split("").reverse().join("");
-            // check if palindrome and also unique (i.e. not already added)
-            if(word === reversedWord && palindromes.indexOf(word) === -1)
+            if(word === reversedWord)
                 palindromes.push(word);
         }
     }
@@ -87,12 +96,11 @@ function palindromes(txt) {
 
 // reference: http://www.w3schools.com/jsref/jsref_sort.asp
 function longestWords(txt) {
-    // sort words by length
     let words = getWords(txt).sort().reverse();
-    let sorted = words.sort(function(a,b){return b.length - a.length});
-    console.log("Sorted: ", sorted);
+    let uniqueWords = removeDuplicates(words);
+    let sorted = uniqueWords.sort(function(a,b){return b.length - a.length});
+  //  console.log("Sorted: ", sorted);
     return sorted.slice(0, 10);
-    // need to remove duplicates
 }
 
 
