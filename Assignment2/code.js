@@ -9,26 +9,21 @@
 //
 function getStats(txt) {
     return {
-        nChars: nChars(txt),
-        nWords: nWords(txt),
-        nLines: nLines(txt),
+        nChars: txt.length,
+        nWords: getWords(txt).length,
+        nLines: getLines(txt).length,
         nNonEmptyLines: nNonEmptyLines(txt),
-        averageWordLength: 3.3,
-        maxLineLength: 33,
+        averageWordLength: averageWordLength(txt),
+        maxLineLength: maxLineLength(txt),
         palindromes: ["12321", "kayak", "mom"],
         longestWords: ["xxxxxxxxx", "123444444"],
         mostFrequentWords: [ "hello(7)", "world(1)" ]
     };
 }
 
-function nChars(txt) {
-    return txt.length;
-}
-
 function getWords(txt) {
     // replace any non-alphanumeric characters with ' '
     // split on ' ' and remove any 'empty' whitespace strings
-
     let temp = txt.replace(/[^a-z0-9]/gi, ' '); // http://stackoverflow.com/questions/388996/
     let words = temp.split(' ').filter(nonEmpty);
     console.log("words: ", words);
@@ -40,16 +35,6 @@ function nonEmpty(txt) {
     return !(txt === "" || allWhitespace.test(txt));
 }
 
-function nWords(txt) {
-    let words = getWords(txt);
-    return words.length;
-}
-
-function nLines(txt) {
-    let lines = getLines(txt);
-    return lines.length;
-}
-
 function getLines(txt) {
     let lines = txt.split("\n");
     return lines;
@@ -57,18 +42,32 @@ function getLines(txt) {
 
 function nNonEmptyLines(txt) {
     let allLines = getLines(txt);
-    console.log("allLines: ", allLines);
+  //  console.log("allLines: ", allLines);
     let lines = allLines.filter(nonEmpty);
-    console.log("nonEmpty: ", lines);
+  //  console.log("nonEmpty: ", lines);
     return lines.length;
 }
 
 function averageWordLength(txt) {
-
+    let totalLength = 0;
+    let words = getWords(txt);
+    for(let i = 0; i < words.length; i++) {
+        totalLength += words[i].length;
+    }
+    return totalLength / words.length;
 }
 
 function maxLineLength(txt) {
+    let max = 0;
+    let lines = getLines(txt);
+    let lineLength;
 
+    for(let i = 0; i < lines.length; i++) {
+        lineLength = lines[i].length;
+        if(lineLength > max)
+            max = lineLength;
+    }
+    return max;
 }
 
 function palindromes(txt) {
