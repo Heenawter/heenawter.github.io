@@ -126,5 +126,5 @@ function mostFrequentWords(txt) {
     let sorted2 = sorted.map(function(a){return a.word + "(" + a.count + ")"});
     console.log("counts: ", sorted2);
 
-    return sorted2;
+    return sorted2.slice(0,10);
 }
