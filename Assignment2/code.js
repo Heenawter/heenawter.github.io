@@ -27,7 +27,6 @@ function getWords(txt) {
     let lowerCase = txt.toLowerCase();
     let allAlphanumeric = lowerCase.replace(/[^a-z0-9]/g, ' '); // http://stackoverflow.com/questions/388996/
     let words = allAlphanumeric.split(' ').filter(nonEmpty);
-    // console.log("words: ", words);
     return words;
 }
 
@@ -43,9 +42,7 @@ function getLines(txt) {
 
 function nNonEmptyLines(txt) {
     let allLines = getLines(txt);
-  //  console.log("allLines: ", allLines);
     let lines = allLines.filter(nonEmpty);
-  //  console.log("nonEmpty: ", lines);
     return lines.length;
 }
 
@@ -94,37 +91,37 @@ function palindromes(txt) {
     return palindromes;
 }
 
+// reference: http://www.w3schools.com/jsref/jsref_sort.asp
 function alphabetical(a, b) {
     if(a <= b)
-        return -1;
-    else if (a > b)
-        return 1;
-}
-
-function lengthSort(a, b) {
-    if(a.length >= b.length)
         return -1;
     else
         return 1;
 }
 
-// reference: http://www.w3schools.com/jsref/jsref_sort.asp
+
 function longestWords(txt) {
     // sort words by length
     let words = getWords(txt);
-    let uniqueWords = removeDuplicates(words).sort();
+    let uniqueWords = removeDuplicates(words);
 
-    console.log("unique: ", uniqueWords);
+    function lengthSort(a, b) {
+        if(a.length === b.length)
+            return alphabetical(a,b);
+        else if (a.length < b.length)
+            return 1;
+        else
+            return -1;
+    }
+
     let sorted = uniqueWords.sort(lengthSort);
     return sorted.slice(0, 10);
 }
-
 
 function mostFrequentWords(txt) {
     // sort words by frequency
     let words = getWords(txt).sort();
     let uniqueWords = removeDuplicates(words);
-
     let counts = [];
 
     let j = 0;
@@ -138,9 +135,15 @@ function mostFrequentWords(txt) {
         count = 0;
     }
 
-    let sorted = counts.sort(function(a,b){return b.count - a.count});
-    let sorted2 = sorted.map(function(a){return a.word + "(" + a.count + ")"});
-//    console.log("counts: ", sorted2);
+    function frequencySort(a, b) {
+      if(a.count === b.count)
+          return alphabetical(a.word,b.word);
+      else if (a.count < b.count)
+          return 1;
+      else
+          return -1;
+    }
 
-    return sorted2.slice(0,10);
+    let sorted = counts.sort(frequencySort);
+    return sorted.slice(0,10).map(function(a){return a.word + "(" + a.count + ")"});
 }
