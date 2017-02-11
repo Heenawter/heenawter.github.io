@@ -7,7 +7,6 @@ body {
     color: white;
     font-size: 12pt;
     padding: 10px;
-    xtext-align: center;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     font-variant: small-caps;
@@ -59,10 +58,31 @@ button:hover {
     align-items: stretch;
 }
 
-#results {
+#resdiv {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    width: 100%;
+}
+#results, #results2 {
     background: burlywood;
     padding: 5px;
     margin: 0px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    flex: 1;
+    border: 1px solid black;
+}
+
+#results2 {
+    background: #99c1de;
+}
+
+.subresdiv {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    flex: 1;
+    min-height: 10em;
+    margin: 3px;
 }
