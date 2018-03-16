@@ -1,0 +1,292 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,800);
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700);
+
+
+
+/*******************************************************/
+/*				  	 Main Styles					   */
+/*******************************************************/
+
+body {
+	color: #02111b;
+	font-family: 'Raleway', sans-serif;
+	margin: 0 auto
+}
+
+h1 {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 3em;
+	margin-bottom: 10px;
+	margin-top: 0px;
+	text-align: center;
+}
+
+h2  {
+	margin-top: 0px;
+	text-align: center;
+}
+
+.emph {
+	color: #B5E61D;
+	font-weight: bold;
+}
+
+
+/*******************************************************/
+/*					   	 Header 					   */
+/*******************************************************/
+
+.header-fixed {
+	display: table;
+	position: fixed;
+	width:100%;
+	background-color: #02111b;
+}
+
+/********************** Logo *********************/
+
+.logo {
+	padding-left: 100px;
+	display: table-cell;
+	width: 300px;
+	vertical-align: middle;
+	line-height: 0;
+}
+
+.logo img  {
+	margin: auto;
+	width: 100%;
+	height: auto;
+	min-width: 250px;
+
+/* source: https://codepen.io/nxworld/pen/ZYNOBZ ------> */	
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.logo img:hover{
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+}
+/* <----- */
+
+/********************** Navigation Menu *********************/
+
+.menu {
+	padding-right: 100px;
+}
+
+.menu li {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: left;
+	padding: 10px;
+	padding-right: 20px;
+}
+
+.menu a {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 2em;
+
+	text-decoration: none;
+	color: #526478;
+	transition: .3s color;
+}
+
+.menu a:hover {
+	color: #B5E61D;
+}
+
+.menu  a.active {
+	color: white;
+}
+
+
+/*******************************************************/
+/*					   	Main Page					   */
+/*******************************************************/
+
+
+#about   {
+	background-image: url(../images/mountains-min.png);
+	background-size: 100%;
+}
+
+#about .content {
+	font-size: 1.2em;
+	color: white;
+	margin: auto;
+
+}
+.col-2 {
+	margin-right: 35px;
+}
+
+/*******************************************************/
+/*						Content 					   */
+/*******************************************************/
+
+.content {
+	padding: 135px;
+	padding-bottom: 25px;
+}
+
+
+/********************** Images *********************/
+
+img {
+	max-width: 100%;
+}
+
+
+/********************** List *********************/
+ul {
+	list-style-position:outside;
+	margin-left: -20px;
+}
+
+/*******************************************************/
+/*					     Table						   */
+/*******************************************************/
+
+table {
+    border-collapse: collapse;
+	text-align: left;
+	width: 100%;
+}
+
+td, th {
+	padding: 10px;
+}
+
+/********************** Header *********************/
+
+th {
+	background-color: #526478;
+	
+	font-family: 'Quicksand', sans-serif;
+	font-style: bold;
+	font-size: 1.4em;
+	
+	vertical-align: middle;
+	text-align: center;
+}
+
+/********************* Rows *********************/
+
+tr:nth-child(even) {
+    background-color: #DAE6ED;
+}
+
+tr:first-child {
+	border-bottom: 1px solid #02111b;
+	border-top: 1px solid #02111b;
+}
+
+tr:last-child {
+	border-bottom: 1px solid #02111b;
+}
+
+/********************* Data *********************/
+
+td {
+	border-left: 1px solid #5D737E;
+}
+
+td:first-child {
+	border-left: none;
+}
+
+#skills-table td {
+	width: 25%;
+}
+
+#experience-table td:first-child, #education-table td:nth-child(4) {
+	text-align: center;
+}
+
+
+/*******************************************************/
+/*						  Columns				       */
+/*******************************************************/
+
+/* source: http://www.w3schools.com/css/css_rwd_mediaqueries.asp ------> */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+@media only screen and (max-width: 1020px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+/* <------ */
+
+/*******************************************************/
+/*			      		Media Queries				   */
+/*******************************************************/
+
+@media only screen and (max-width: 1020px) {
+	#about {
+		background-image: none;
+		background-color: #23374d;
+	}
+	
+	.page-icon {
+		max-width: 30%;
+		min-width: 150px;
+		float: left;
+	}
+
+	.header-fixed, .logo, .menu {
+		display: block;
+				margin-left: auto;
+		margin-right: auto
+	}
+	
+	.logo {
+		padding: 0px;
+		margin-left: auto;
+		margin-right: auto
+	}
+
+	.menu {
+		padding: 0px;
+		text-align: center;
+	}
+
+	.menu li {
+		display: inline-block;
+		padding: 0px;
+		padding-right: 20px;
+	}
+
+	.menu a {
+		font-size: 1.5em;
+	}
+
+	.content{
+			padding: 50px;
+			padding-top: 140px;
+			padding-bottom: 25px;
+			padding-right: 75px;
+			margin: auto;
+	}
+}
