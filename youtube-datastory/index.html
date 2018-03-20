@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Scrolling Nav - Start Bootstrap Template</title>
+    <title>What's Trending? | A YouTube Datastory</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -16,6 +16,7 @@
     <!-- Custom styles for this template -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
 	<link href="css/stylesheet.css" rel="stylesheet">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet"><!-- thats important for animation effekcts -->
   </head>
 
   <body id="page-top">
@@ -23,7 +24,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">What's Trending?</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -60,7 +61,7 @@
     <header class="bg-primary">
       <div class="container text-center">
 	 	<h1>WHAT'S <b>TRENDING</b>?</h1>
-		<p class="lead">A Look at a Year of YouTube Trending Videos</p>
+		<p class="lead">A Look at 5 Months of YouTube Trending Videos</p>
 		<hr>
 		<P>	A datastory by Hannah Wright. </P>
       </div>
@@ -84,27 +85,78 @@
     </section>
 
     <section id="q1">
-      <div class="container">
+      <div class="container"  data-aos="fade-up" data-aos-duration="3000" data-aos-anchor-placement="bottom">
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <h2>Question #1</h2>
-			<h3>Which words should you use in your tags and titles?</h3>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis,
+			<h3>What are good choices for a trending video's title / tags?</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis,
 				 id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.
 			 Word cloud, with color controlled by sentiment of the word.</p>
+
+             <img src="./images/TitleWordCloud.png" class="img-fluid"/>
+
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis,
+ 				 id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+             <img src="./images/SentimentOverTime.png" class="img-fluid"/>
+
+             <h4>What should the next trending video be according to a Markov chain generator?</h4><p>
+                <!-- <blockquote class="blockquote text-center">
+                    <p class="mb-0">The Horrors of Flavored Water Inside The NBA - Chuck & Shaq Laugh at Rockets & Clippers Altercation</p>
+                    <footer class="blockquote-footer">An upcoming video by <cite title="Source Title">Studio C.</cite></footer>
+                </blockquote> -->
+                <!-- <blockquote class="blockquote text-center">
+                    <p class="mb-0">27 INGENIOUS STATIONERY HACKS THAT WILL CHANGE YOUR LIFE EASIER I SPEAK WITH HATERS!</p>
+                    <footer class="blockquote-footer">An upcoming video by <cite title="Source Title">Kidi Fun</cite></footer>
+                </blockquote> -->
+                <blockquote class="blockquote text-center">
+                    <p class="mb-0">Learn German with the face of a Kitten!</p>
+                    <footer class="blockquote-footer">An upcoming video by <cite title="Source Title">NuoViso.TV</cite></footer>
+                </blockquote>
+                <blockquote class="blockquote text-center">
+                    <p class="mb-0">I bought the iMac Pro Review: Not a Trap!</p>
+                    <footer class="blockquote-footer">An upcoming video by <cite title="Source Title">Dying Light</cite></footer>
+                </blockquote>
+                <blockquote class="blockquote text-center">
+                    <p class="mb-0">That you did THAT!</p>
+                    <footer class="blockquote-footer">An upcoming video by <cite title="Source Title">Nintendo</cite></footer>
+                </blockquote>
+                <blockquote class="blockquote text-center">
+                    <p class="mb-0">TEACHING KARLIE KLOSS HOW TO LOOK LIKE A HOLIDAY PRESENT!</p>
+                    <footer class="blockquote-footer">An upcoming video by <cite title="Source Title">Late Night with Seth Meyers</cite></footer>
+                </blockquote>
+                <blockquote class="blockquote text-center">
+                    <p class="mb-0">Post Malone reacts to unhealthy videos for kids!</p>
+                    <footer class="blockquote-footer">An upcoming video by <cite title="Source Title">Doug DeMuro</cite></footer>
+                </blockquote>
+                <blockquote class="blockquote text-center">
+                    <p class="mb-0">Distraught father of 3 years, the spirit of future Christmas!</p>
+                    <footer class="blockquote-footer">An upcoming video by <cite title="Source Title">Toni Pirosa</cite></footer>
+                </blockquote>
+            <img src="./images/TagsWordCloud.png" class="img-fluid"/>
           </div>
         </div>
       </div>
     </section>
 
 	<section id="q2">
-	  <div class="container">
+	  <div class="container" data-aos="fade-up" data-aos-duration="3000" data-aos-anchor-placement="bottom">
 		<div class="row">
 		  <div class="col-lg-8 mx-auto">
 			<h2>Question #2</h2>
 			<h3>What genre will give you the best user interaction?</h3>
-			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
-		  </div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+
+            <img src="./images/CategoryViewsTotal.png" class="img-fluid"/>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+
+            <img src="./images/CategoryViewsOverTime.png" class="img-fluid"/>
+
+            <p>Try to predict genre by other factos???</p>
+
+            <img src="./images/CategoryInteractionScore.png" class="img-fluid"/>
+          </div>
 		</div>
 	  </div>
 	</section>
@@ -115,8 +167,10 @@
 		  <div class="col-lg-8 mx-auto">
 			<h2>Question #3</h2>
 			<h3>Depending on the language you speak, which trending page is the best fit?</h3>
-			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
-		  </div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+
+            <img src="./images/LanguageBreakdown.png" class="img-fluid"/>
+          </div>
 		</div>
 	  </div>
 	</section>
@@ -173,6 +227,13 @@
 
     <!-- Custom JavaScript for this theme -->
     <script src="js/scrolling-nav.js"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script> <!-- Important for animation -->
+
+    <script>
+    $(function() {
+        AOS.init();
+        });
+    </script>
   </body>
 
 </html>
