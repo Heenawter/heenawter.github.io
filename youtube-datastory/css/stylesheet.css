@@ -2,6 +2,10 @@
 @import url(https://fonts.googleapis.com/css?family=Quicksand:400,700);
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+@import url(https://fonts.googleapis.com/css?family=Domine:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Lora:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Vollkorn:400,700);
 
 
 /*******************************************************/
@@ -10,8 +14,14 @@
 
 body {
 	color: #02111b;
-	font-family: 'Open Sans', sans-serif;
+	/* font-family: 'Open Sans', sans-serif; */
+
+    font-family: 'Roboto Slab', serif;
+	font-size: 1.1em;
+	font-weight:300;
 	margin: 0 auto
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
@@ -21,11 +31,15 @@ h1 {
 	margin-top: 0px;
 	text-align: center;
 	color: #cd322e;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 h2  {
 	margin-top: 0px;
 	text-align: center;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 h3  {
@@ -34,6 +48,8 @@ h3  {
 	text-align: center;
 	margin-bottom: 10px;
 	color: #cd322e;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 hr {
@@ -80,6 +96,10 @@ hr {
 
 section {
     padding: 100px 0;
+}
+
+.navbar {
+	font-family: 'Open Sans', sans-serif;
 }
 
 #intro {
