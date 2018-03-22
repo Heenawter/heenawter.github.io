@@ -78,6 +78,8 @@
               <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
               <li>Minimal custom CSS so you are free to explore your own unique design options</li>
             </ul>
+            <p> I have <b>two</b> versions of the same dataset to consider: one which contains every single video that has trended, and one that has been sampled.
+                The </p>
           </div>
         </div>
       </div>
@@ -88,24 +90,110 @@
 		<div class="row">
 		  <div class="col-lg-8 mx-auto">
 			<h2>Question #1</h2>
-            <h3>What genre of video should you make?</h3>
+            <h3>What genre should your video be?</h3>
 			<!-- <h3>What genre will give you the best user interaction?</h3> -->
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+			<p>
+                The trending page of YouTube is broken down into <span class='number'>15</span> different categories.
+                One possible subset of the more popular genres, in no particular order, is as follows:
+
+                <!-- 'Autos & Vehicles', 'Comedy', 'Education', 'Entertainment',
+                       'Film & Animation', 'Gaming', 'Howto & Style', 'Music',
+                       'News & Politics', 'Nonprofits & Activism', 'People & Blogs',
+                       'Pets & Animals', 'Science & Technology', 'Shows', 'Sports',
+                       'Travel & Events' -->
+
+                <ul class="row">
+                     <li class="list-unstyled-item col-md-6">Comedy</li>
+                     <li class="list-unstyled-item col-md-6">Gaming</li>
+                     <li class="list-unstyled-item col-md-6">Entertainment</li>
+                     <li class="list-unstyled-item col-md-6">Music</li>
+                     <li class="list-unstyled-item col-md-6">Howto & Style</li>
+                     <li class="list-unstyled-item col-md-6">Sports</li>
+                </ul>
+
+                With such a large variety of options to choose from, which category should you make content for?
+                Obviously, the most obvious answer would be to make content for the genre you are passionate about and talented in.
+                After all, if you are hopeleslly tonedeaf, it may not be worth your time to persue a career in music.
+            </p>
+
+            <p>
+                That being said, let us approach this problem as though each genre of video is equally likely and enjoyable.
+                Considering this, what factors would influence our decision on which category to aim for?
+            </p>
+
+            <p>
+                Let's first consider the views each category gets (total).
+            </p>
 
             <figure class="full-width">
                 <img src="./images/CategoryViewsTotal.png" class="img-fluid"/>
             </figure>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+            <p>
+                As can be seen above, the <span class='emph'>Music</span> category far outweighs the other genres in terms of overall views.
+                In comparison to the second-most viewed category (Entertainment), <span class='emph'>Music</span> has approximately
+                <span class='number'>30-million</span> more views; this is nearly double the number of views!
+                With some thought, this result is fairly unsurprising.
+                First off, music is universably shareable.
+                This is especially true due to the lack of a language barrier when it comes to music in comparison to other forms of digital media.
+                Although you may not understand the lyrics of a particular song, that by no means impacts your ability to enjoy it.
+                As a result, it is not uncommon for music videos to trend in multiple countries.
+                For example, here are just a few of the <span class='number'>55</span> different music videos that made the trending page of every
+                country in our dataset:
+
+                <blockquote class="blockquote text-center">
+                    <p class="mb-0">'MIC Drop (Steve Aoki Remix)' Official MV</p>
+                    <footer class="blockquote-footer">By <cite title="Source Title">BTS (방탄소년단)</cite></footer>
+                </blockquote>
+                <blockquote class="blockquote text-center">
+                    <p class="mb-0">End Game ft. Ed Sheeran, Future</p>
+                    <footer class="blockquote-footer">By <cite title="Source Title">Taylor Swift</cite></footer>
+                </blockquote>
+                <blockquote class="blockquote text-center">
+                    <p class="mb-0">Man of the Woods (Official Video)</p>
+                    <footer class="blockquote-footer">By <cite title="Source Title">Justin Timberlake</cite></footer>
+                </blockquote>
+
+                In comparison, the next most universally shared category was Entertainment with only <span class='number'>29</span> videos that made every trending page,
+                which is almost <span class='emph2'>half</span> of the number of music videos that met the same condition.
+                The category 'Film & Animation' had <span class='number'>15</span> of these videos, and all the remaining categories had <span class='number'>10</span> or less.
+                Of the fifteen possible categories, <span class='number'>3</span> of them had the minimum value of <span class='number'>1</span>.
+                This helps to  illustrate our idea that music videos are more universally shareable in comparison to the other categories.
+            </p>
+
+            <p>
+                Music videos also have one of the highest <span class='emph2'>replayability</span> factors in comparison to the other categories.
+                It is not uncommon for people without access to some other music streaming service to make use of YouTube's multitude of musical content.
+                After all, this is the reason why the paid-for-subscription-service YouTube Red has an option to stream music in a manner not unlike Spotify.
+                This is just another explanation for why this category dominates the other categories in terms of views.
+            </p>
+
+            <p>
+                Despite the <span class='emph'>Music</span> category getting the most views overall,
+                the future is not-so-bleak for the other categories.
+                The figure below illustrates the number of views (per day) of music videos in comparison to all other categories:
+            </p>
 
             <figure class="full-width">
                 <img src="./images/CategoryViewsOverTime.png" class="img-fluid"/>
             </figure>
 
-            <p>Try to predict genre by other factos???</p>
+            <p>
+                It is worth mentioning that the above figure was constructed using the <span class='emph2'>sampled</span> version of our dataset.
+                This helps to normalize the results, since only <span class='number'>5</span> videos from each category (per day) are included.
+                While I tried constructing this same graph with both versions of my dataset, I found this one to be the most interesting.
+            </p>
+
+            <p>
+                We can see in the figure above that
+            </p>
+
+            <p>
+                Views are not all that matters when it comes to choosing a category for you.
+            </p>
 
             <figure class="full-width">
-                <img src="./images/CategoryInteractionScore.png" class="img-fluid"/>
+                <img src="./images/InteractionBreakdown.png" class="img-fluid"/>
             </figure>
 
           </div>
@@ -123,6 +211,10 @@
 
             <figure class="full-width">
                 <img src="./images/LanguageBreakdown.png" class="img-fluid"/>
+            </figure>
+
+            <figure class="full-width">
+                <img src="./images/LanguageTrends.png" class="img-fluid"/>
             </figure>
           </div>
 		</div>
