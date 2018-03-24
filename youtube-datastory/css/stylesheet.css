@@ -57,6 +57,13 @@ hr {
 	background-color: #cd322e;
 }
 
+.divideme {
+	background-color: #e6e6e6 !important;
+	line-height: 1;
+	margin-top: 35px;
+	margin-bottom: 30px;
+}
+
 .emph {
 	color: #cd322e;
 	font-weight: bold;
@@ -78,10 +85,16 @@ hr {
   /* 1/3 of 60% = the 20% margin on either side */
   margin-left: -23.33%;
   margin-right: -23.33%;
-  margin-bottom: 30px;
-  margin-top: 30px;
 }
 
+figcaption {
+	text-align: center;
+}
+
+figure {
+	padding-bottom: 40px;
+	padding-top: 20px;
+}
 
 @media screen and (max-width: 1000px) {
 	.full-width {
@@ -111,6 +124,11 @@ section {
 
 #intro {
 	background-color: #e6e6e6!important;
+}
+
+section {
+	padding-bottom: 40px;
+	padding-top: 70px;
 }
 
 .divide {

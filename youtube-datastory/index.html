@@ -120,13 +120,18 @@
                 That being said, let us approach this problem as though each genre of video is equally likely and enjoyable.
                 Considering this, what factors would influence our decision on which category to aim for?
             </p>
-
+            <hr class='divideme'>
             <p>
-                Let's first consider the views each category gets (total).
+                One of the first things that comes to mind when hearing that a video is 'popular' on YouTube is likely the number of
+                views a specific video gets. It is unlikely, for example, that a video with under <span class='number'>500</span> views
+                would be considered 'popular' by the general YouTube audience.
+                Since the goal of creating content for this platform is <i>most likely</i> to make these types of 'popular' videos,
+                it makes sense to start by looking at this factor for each category.
             </p>
 
             <figure class="full-width">
                 <img src="./images/CategoryViewsTotal.png" class="img-fluid"/>
+                <figcaption class="figure-caption">Figure 1</figcaption>
             </figure>
 
             <p>
@@ -154,6 +159,7 @@
                     <footer class="blockquote-footer">By <cite title="Source Title">Justin Timberlake</cite></footer>
                 </blockquote>
 
+
                 In comparison, the next most universally shared category was Entertainment with only <span class='number'>29</span> videos that made every trending page,
                 which is almost <span class='emph2'>half</span> of the number of music videos that met the same condition.
                 The category 'Film & Animation' had <span class='number'>15</span> of these videos, and all the remaining categories had <span class='number'>10</span> or less.
@@ -167,34 +173,61 @@
                 After all, this is the reason why the paid-for-subscription-service YouTube Red has an option to stream music in a manner not unlike Spotify.
                 This is just another explanation for why this category dominates the other categories in terms of views.
             </p>
-
+            <hr class='divideme'>
             <p>
                 Despite the <span class='emph'>Music</span> category getting the most views overall,
                 the future is not-so-bleak for the other categories.
-                The figure below illustrates the number of views (per day) of music videos in comparison to all other categories:
+                Figure 2 below illustrates the number of views (per day) of music videos in comparison to all other categories.
+                It is worth mentioning that this figure was constructed using the <span class='emph2'>sampled</span> version of our dataset.
+                This helped to normalize the results, since only <span class='number'>5</span> videos from each category (per day) were included.
+                I tried constructing this same graph with both versions of my dataset, and I found this one to be the most interesting.
             </p>
 
             <figure class="full-width">
                 <img src="./images/CategoryViewsOverTime.png" class="img-fluid"/>
+                  <figcaption class="figure-caption">Figure 2</figcaption>
             </figure>
-
             <p>
-                It is worth mentioning that the above figure was constructed using the <span class='emph2'>sampled</span> version of our dataset.
-                This helps to normalize the results, since only <span class='number'>5</span> videos from each category (per day) are included.
-                While I tried constructing this same graph with both versions of my dataset, I found this one to be the most interesting.
+                Figure 2 shows that the views of the videos in the <span class='emph'>Music</span> category as well as
+                all <span class='emph2'>other</span> categories (when considered as a whole) are on the rise.
+                In fact, the views trend line for 'Other' seems to have a slightly steeper slope than the one for 'Music'.
+                This shows that, while music videos may get more views overall than all other categories,
+                views in general are on an upward trend.
+                As a result, the future of views looks promising <i>regardless</i> of the video category you choose.
+
             </p>
-
+            <hr class='divideme'>
             <p>
-                We can see in the figure above that
+                However, views are not all that matters when it comes to choosing a category that fits you best.
+                For example, you may be someone who values user comments and direct communication with your audience
+                more than simply the number of views.
+                On the other hand, you may be heavily impacted by negative feedback, so you'd prefer to pick a category
+                that has mostly positive feedback.
+                These are other factors, besides views, that may impact your decision for which category to produce
+                content for.
             </p>
-
             <p>
-                Views are not all that matters when it comes to choosing a category for you.
+                Figure 3 below shows the breakdown of user interaction per category, as described by
+                the average number of comments, likes, and dislikes on the videos.
+                Since the views of every category far outweighed any other interaction factor (and since I've already
+                heavily discussed views above), I chose not to include the percentage of user interaction that comes
+                from views. This helped give more insight into the other factors.
             </p>
 
             <figure class="full-width">
                 <img src="./images/InteractionBreakdown.png" class="img-fluid"/>
+                <figcaption class="figure-caption">Figure 3</figcaption>
             </figure>
+
+            <p>
+                Using Figure 3, we can answer the above hypothetical examples. If user comments are an important factor for you when making your videos,
+                then the category <span class='emph2'>'Nonprofits & Activism'</span> is for you.
+                This can be seen by the fact that this category has <span class='number'>21%</span> of its user interaction coming from comments,
+                which is the most out of any other category. Interestingly, this category also has a higher than average percentage of
+                dislikes, coming in at <span class='number'>14.5%</span>. As a result, this may not be the best category for the second scenario where
+                negative feedback is extremely undesirable. Instead, the best categories for this scenario would be <span class='emph2'>'Pets & Animals'</span> (with only <span class='number'>1.7%</span> of
+                user interaction coming from dislikes) or <span class='emph2'>'Comedy'</span> (which has only <span class='number'>2.7%</span>).
+            </p>
 
           </div>
 		</div>
@@ -206,16 +239,131 @@
 		<div class="row">
 		  <div class="col-lg-8 mx-auto">
 			<h2>Question #2</h2>
-			<h3>Depending on the language you speak, which trending page is the best fit?</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+			<h3>Which language should your title be?</h3>
+			<p>
+                Depending on the language you speak, it's possible that your video may not trend.
+                After all, videos in languages that do not fall into the majority limits the potential size of the audience, which goes against
+                the fundamental idea behind the trending page.
+                Trending videos are meant to target as wide of an audience as possible, so it makes sense to publish a video in one of the top
+                languages if you want to increase your chances of making this list.
+            </p>
+
+            <hr class='divideme'>
+
+            <p>
+                Hence, let's start by looking at the diversity of each trending page. In the context of this analysis, <span class='emph2'>diversity</span>
+                is measured by the number of unique lanugages detected for the titles of each country's page.
+
+                Overall, my sampled dataset had a total of <span class='number'>78</span> unique languages used for the titles.
+                Hence, the number of unique languages is most
+                likely actually much larger. Still, I was able to get a good understanding of the breakdown of the <span class='emph2'>majority</span>
+                languages, and this analysis can be seen in Table 1.
+            </p>
+
+            <figure>
+                <table class="table">
+                  <thead class='thead-light'>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Country</th>
+                      <th scope="col">Unique Language Count</th>
+                      <th scope="col">Top Language</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>France</td>
+                      <td><span class='number'>70</span></td>
+                      <td>French</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Germany</td>
+                      <td><span class='number'>59</span></td>
+                      <td>German</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Canada</td>
+                      <td><span class='number'>48</span></td>
+                      <td>English</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>United Kingdom</td>
+                      <td><span class='number'>27</span></td>
+                      <td>English</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>United States</td>
+                      <td><span class='number'>23</span></td>
+                      <td>English</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <figcaption class="figure-caption">Table 1</figcaption>
+            </figure>
+
+            <p>
+                In order to get a more in-depth analysis of the language use in each trending page, I took the <span class='emph2'>top <span class='number'>5</span></span>
+                languages from each country and mapped the percentage breakdown of the resulting shortened language list for each of the trending pages.
+                Since there was a lot of overlap between these top <span class='number'>5</span>, I ended up only looking at <span class='number'>12</span>
+                different languages for each trending page:
+
+                <ul class="row">
+                     <li class="list-unstyled-item col-md-6">English</li>
+                     <li class="list-unstyled-item col-md-6">French</li>
+                     <li class="list-unstyled-item col-md-6">Chinese</li>
+                     <li class="list-unstyled-item col-md-6">Hindi</li>
+                     <li class="list-unstyled-item col-md-6">German</li>
+                     <li class="list-unstyled-item col-md-6">Turkish</li>
+                     <li class="list-unstyled-item col-md-6">Russian</li>
+                     <li class="list-unstyled-item col-md-6">Arabic</li>
+                     <li class="list-unstyled-item col-md-6">Haitian Creole</li>
+                     <li class="list-unstyled-item col-md-6">Korean</li>
+                     <li class="list-unstyled-item col-md-6">Japanese</li>
+                     <li class="list-unstyled-item col-md-6">Portuguese</li>
+                </ul>
+
+                The percentage breakdown of each of these languages can be seen in Figure 4.
+                Note that the percentages represented in this graph do not represent the <i>overall</i> percentages of titles on each trending page.
+                Instead, I removed any video that was not in one of the above languages and did my analysis on this subset of data.
+                As a result, the actual percentages for each language will be slightly smaller.
+                That being said, when I tried to represent the <i>real</i> percentages, the resulting graph was e
+
+            </p>
 
             <figure class="full-width">
                 <img src="./images/LanguageBreakdown.png" class="img-fluid"/>
+                <figcaption class="figure-caption">Figure 4</figcaption>
             </figure>
+
+
+            <hr class='divideme'>
+
+            <p>
+                Since <span class='number'>3</span> out of <span class='number'>5</span> of the trending pages had
+                <span class='emph'>English</span> as the majority language, I wanted to see if there was any trend
+            </p>
 
             <figure class="full-width">
                 <img src="./images/LanguageTrends.png" class="img-fluid"/>
+                <figcaption class="figure-caption">Figure 5</figcaption>
             </figure>
+
+            <p>
+
+                As a reminder, I had to use the <span class='emph2'>sampled</span> version of my dataset in order
+                to accomodate for translation limitations in this analysis question.
+
+                It is also worth mentioning that, throughout this analysis, I assumed that the language used for the title represents the language used in the video itself.
+                Obviously, this is not always the case. However, this still provides a decent approximation while still accomodating for
+                my limited translation capabilities (as discussed above).
+                One other limitatio9n of this analysis is that the Google API used for translation is not <span class='number'>100%</span> accurate with its language detection.
+                Still,
+            </p>
           </div>
 		</div>
 	  </div>
