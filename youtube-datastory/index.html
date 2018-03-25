@@ -361,20 +361,20 @@
                 However, these results were not that far from my expectations.
             </p>
             <p>
-                In the UK, <span class='number'>92%</span> of the population considered English to be their
+                In the UK, <span class='number'>92%</span> of the population considered <span class='emph'>English</span> to be their
                 main language in 2013 according to the BBC [<a href='http://www.bbc.com/news/uk-21259401'>source</a>].
                 The USA, on the other hand, has approximately <span class='number'>70%</span> of their population made up of native
-                English speakers [<a href='https://www.babbel.com/en/magazine/most-spoken-languages-in-the-us'>source</a>].
+                <span class='emph'>English</span> speakers [<a href='https://www.babbel.com/en/magazine/most-spoken-languages-in-the-us'>source</a>].
                 That being said, it was slightly surprising that the American trending page was not slightly more diverse.
-                Despite <span class='number'>11%</span> people in the United States speaks Spanish natively, only <span class='number'>5</span>
-                video titles in my sampled dataset were in Spanish.
+                Despite <span class='number'>11%</span> people in the United States speaking Spanish natively, only <span class='number'>5</span>
+                video titles in my sampled dataset were in Spanish. In comparison, France's dataset contained <span class='number'>28</span>.
             </p>
             <p>
                 While it is not reasonable to draw a direct connection between the titles of YouTube's trending page and that
                 country's actual diversity, I still found this result to be interesting.
-                That being said, it is entirely possible that there were more videos in Spanish and other languages in my unsampled dataset that
-                happened to not be picked in my sampling process.
-                As a result, these percentages are not representative of the languages spoken in a specific country.
+                That being said, it is entirely possible that my sampling process somehow missed many of the non-<span class='emph'>English</span> videos
+                and thus skewed the results in one way or the other.
+                As a result, these percentages are not actually representative of the languages spoken in a specific country.
                 Regardless, this still presents an interesting look at the languages that dominated each trending page.
             </p>
 <!--
@@ -383,15 +383,18 @@
                 overwhelmingly high majority of their videos were <span class='emph'>English</span>: nearly <span class='number'>90%</span>.
 
             </p> -->
-
+G
             <hr class='divideme'>
 
             <p>
-                Since <span class='number'>3</span> out of <span class='number'>5</span> of the trending pages had
-                <span class='emph'>English</span> as the majority language, I wanted to dive deeper into the analysis of
-                these vidoes.
-                Specifically, I wanted to see if there was any indication that the top <span class='number'>3</span>
-                diverse countries were becoming more or less
+                Next, I wanted to see if the trending pages of YouTube were
+                becoming more or less dominated by <span class='emph'>English</span> videos over time.
+                So, I took the <span class='emph2'>top 3</span> diverse countries from above (France, Germany, and Canada)
+                and mapped their English use VS all other languages.
+                The results for this can be seen in Figure 5 below.
+                It is worth mentioning that I returned to the
+               <i>entire</i> language list for this analysis unlike in the analysis above;
+               hence, the 'Other' category consists of <span class='number'>76</span> different languages.
             </p>
 
             <figure class="full-width">
@@ -399,16 +402,29 @@
                 <figcaption class="figure-caption">Figure 5</figcaption>
             </figure>
 
+            <hr class='divideme'>
             <p>
+                So, based on the above, it is fair to conclude that a video with a title in <span class='emph'>English</span> is more likely
+                to trend than titles in any other languages.
+                Both French and German are also good choices, although you are less likely to trend globally with these languages as your title.
+                Of the  <span class='number'>23</span> videos that made every single trending page, only
+                <span class='number'>1</span> of them was classified as non-English.
+                However, upon further inspection, this video was actually Troye Sivan's music video for his song 'My My My!', which had
+                been mis-classified by the Google API as <span class='emph2'>Russian</span>.
+                So, in reality, not a single one of these videos was non-English.
+                Hence, English is still the best choice if you want to make the trending page.
+            </p>
 
-                As a reminder, I had to use the <span class='emph2'>sampled</span> version of my dataset in order
-                to accomodate for translation limitations in this analysis question.
-
-                It is also worth mentioning that, throughout this analysis, I assumed that the language used for the title represents the language used in the video itself.
+            <p>
+                As a reminder, I had to use the <span class='emph2'>sampled</span> version of my dataset
+                in order to accomodate for translation limitations in this analysis question.
+                It is also worth mentioning that I assumed the language used for the title represents the language used in the video itself.
                 Obviously, this is not always the case. However, this still provides a decent approximation while still accomodating for
                 my limited translation capabilities (as discussed above).
-                One other limitatio9n of this analysis is that the Google API used for translation is not <span class='number'>100%</span> accurate with its language detection.
-                Still,
+                One other limitation of this analysis is that the Google API used for translation is not <span class='number'>100%</span> accurate with its language detection.
+                This was demonstrated above, with Troy Sivan's video being mislabeled as Russian despite being in English.
+                However, there is not much that can be done to improve this limitation with today's tools;
+                after all, Google Translate is one of the best publicly available tools on the market to perform this type of analysis.
             </p>
           </div>
 		</div>
