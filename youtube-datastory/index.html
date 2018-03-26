@@ -383,7 +383,7 @@
                 overwhelmingly high majority of their videos were <span class='emph'>English</span>: nearly <span class='number'>90%</span>.
 
             </p> -->
-G
+
             <hr class='divideme'>
 
             <p>
@@ -402,6 +402,16 @@ G
                 <figcaption class="figure-caption">Figure 5</figcaption>
             </figure>
 
+            <p>
+                Figure 5 shows that the trend for  <span class='emph'>English</span> videos making the trending page
+                is slightly positive wheras the 'Other' category seems to be on a gentle decline.
+                While the 'Other' languages outweigh the English videos in this subset of the data on almost every day, there are
+                <span class='number'>2</span> days where English overtakes the other languages:
+                January 28th and March 5th in 2018. I could not find any explanation for the increase in January.
+                However, the Oscars took place on March 4th, which may explain the increase in English videos on the trending page the day after.
+
+            </p>
+
             <hr class='divideme'>
             <p>
                 So, based on the above, it is fair to conclude that a video with a title in <span class='emph'>English</span> is more likely
@@ -409,10 +419,11 @@ G
                 Both French and German are also good choices, although you are less likely to trend globally with these languages as your title.
                 Of the  <span class='number'>23</span> videos that made every single trending page, only
                 <span class='number'>1</span> of them was classified as non-English.
-                However, upon further inspection, this video was actually Troye Sivan's music video for his song 'My My My!', which had
-                been mis-classified by the Google API as <span class='emph2'>Russian</span>.
+
+                However, upon further inspection of this video, it turns out it was actually Troye Sivan's music video for his song 'My My My!'
+                Despite being in English, the title had been mis-classified by the Google API as <span class='emph2'>Russian</span>.
                 So, in reality, not a single one of these videos was non-English.
-                Hence, English is still the best choice if you want to make the trending page.
+                Hence, <span class='emph'>English</span> is still the best overall choice if you want to make the trending page.
             </p>
 
             <p>
@@ -420,7 +431,9 @@ G
                 in order to accomodate for translation limitations in this analysis question.
                 It is also worth mentioning that I assumed the language used for the title represents the language used in the video itself.
                 Obviously, this is not always the case. However, this still provides a decent approximation while still accomodating for
-                my limited translation capabilities (as discussed above).
+                my limited translation capabilities.
+            </p>
+            <p>
                 One other limitation of this analysis is that the Google API used for translation is not <span class='number'>100%</span> accurate with its language detection.
                 This was demonstrated above, with Troy Sivan's video being mislabeled as Russian despite being in English.
                 However, there is not much that can be done to improve this limitation with today's tools;
