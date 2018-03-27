@@ -109,9 +109,7 @@
                 With such a large variety of options to choose from, which category should you make content for?
                 Obviously, the most obvious answer would be to make content for the genre you are passionate about and talented in.
                 After all, if you are hopeleslly tonedeaf, it may not be worth your time to persue a career in music.
-            </p>
 
-            <p>
                 That being said, let us approach this problem as though each genre of video is equally likely and enjoyable.
                 Considering this, what factors would influence our decision on which category to aim for?
             </p>
@@ -450,19 +448,61 @@
           <div class="col-lg-8 mx-auto">
             <h2>Question #3</h2>
             <h3>How should you title / tag your video?</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis,
-                 id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.
-             Word cloud, with color controlled by sentiment of the word.</p>
+            <p>
+                One of the first things a potential viewer will see of your video is the title.
+                Because of this, it's important to pick a title that will draw them in and make them want to click.
+
+                Now, there are a variety of techniques that are designed to do just that.
+                For example, clickbait, although disingenuous, is one method that is known to work.
+            </p>
+            <p>
+                According to the American Marketing Association, one video with a normal title recieved only
+                <span class='number'>1-million</span> views, whereas the same video, rebranded with a clickbait title,
+                was able to pull in <span class='number'>17-million</span>
+                [<a href='https://www.ama.org/publications/MarketingInsights/Pages/one-writer-explored-the-marketing-science-behind-clickbait.aspx'>source</a>].
+                This is due to the <span class='emph2'>information gap theory</span>, which states that
+                "humans have an insatiable appetite to indulge their curiosity"
+                [<a href='https://www.ama.org/publications/MarketingInsights/Pages/one-writer-explored-the-marketing-science-behind-clickbait.aspx'>source</a>].
+                While clickbait is proven, we want to see if there are any <i>other</i> cominalities in the titles of trending videos.
+            </p>
+
+            <p>
+                For the analysis to follow, it is worth mentioning that I was once again limited to the <span class='emph2'>sampled</span>
+                version of the dataset. Not only did I want to prevent biases towards English titles and words, I was also unsure of the reliability of my
+                sentiment analysis tool for non-English words.
+                In order to keep things as equal as I could, I chose to stick to my translated titles rather than the full dataset.
+            </p>
+
+            <hr class='divideme'>
+            <p>
+                Let's start by looking at the <span class='emph2'>most used words</span> in the titles of these trending videos
+                (excluding stopwords such as 'the,' which provide no insight).
+                Beyond that, let's examine whether words of a specific <i>sentiment</i> are more common in titles than others.
+                While making a title using these specific words will by no means guarantee trending status,
+                it will provide an insight on what <i>kinds</i> of words may increase your chances.
+                The results of this analysis are shown in Figure 6.
+            </p>
 
              <figure class="full-width">
                  <img src="./images/TitleWordCloud.png" class="img-fluid"/>
+                 <figcaption class="figure-caption">Figure 6</figcaption>
              </figure>
 
              <p>
-                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis,
-                 id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.
+                 In the above, the size of the font corresponds to the number of times that specific word occurs in the trending
+                 video's titles. The colour, in this case, is the algorithm-determined <i>sentiment</i> of that word:
+                 red is <span class='emph'>positive</span> (a polarity score of greater than <span class='number'>0</span>),
+                 dark gray is <span class='emph2'>negative</span> (polarity less than <span class='number'>0</span>), and
+                 light gray is neutral. The library <span class='number'>TextBlob</span> was used for this sentiment score.
              </p>
 
+             <p>
+                 It is apparent right away that sentiment analysis is hardly a perfect tool.
+                 Looking at Figure 6, we can see that some words were classified as either <span class='emph'>positive</span> or
+                 <span class='emph2'>negative</span> in some strange ways.
+                 For example, 'green' is labeled as <span class='emph2'>negative</span> despite the fact that colours, by nature,
+                 are fairly neutral. Perhaps this is due to its usage in idioms such as "green with envy" or 
+             </p>
 
              <figure class="full-width">
                 <img src="./images/SentimentOverTime.png" class="img-fluid"/>
