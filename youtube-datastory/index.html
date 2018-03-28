@@ -247,7 +247,7 @@
 		<div class="row">
 		  <div class="col-lg-8 mx-auto">
 			<h2>Question #2</h2>
-			<h3>Which language should your title be?</h3>
+			<h3>Which language should you speak?</h3>
 			<p>
                 Depending on the language you speak, it's possible that your video may not trend.
                 After all, making a video in a language that does not fall into the majority limits the potential size of the audience
@@ -524,44 +524,69 @@
              </p>
 
              <hr class='divideme'>
+             <p>
+                 In order to get a better understanding of trending titles, I trained a Markov chain generator on
+                 the titles in order to generate my own.
+                 To add an extra element of fun, I also chose a random channel from the list of those who have trended
+                 and assigned these to these generated titles.
+                 So, what should be the next trending video title according to a Markov chain generator?
+             </p>
 
-             <figure class="full-width">
-                <img src="./images/SentimentOverTime.png" class="img-fluid"/>
-             </figure>
+             <p>
+                    <!-- <blockquote class="blockquote text-center">
+                        <p class="mb-0">The Horrors of Flavored Water Inside The NBA - Chuck & Shaq Laugh at Rockets & Clippers Altercation</p>
+                        <footer class="blockquote-footer">An upcoming video by <cite title="Source Title">Studio C.</cite></footer>
+                    </blockquote> -->
+                    <!-- <blockquote class="blockquote text-center">
+                        <p class="mb-0">27 INGENIOUS STATIONERY HACKS THAT WILL CHANGE YOUR LIFE EASIER I SPEAK WITH HATERS!</p>
+                        <footer class="blockquote-footer">An upcoming video by <cite title="Source Title">Kidi Fun</cite></footer>
+                    </blockquote> -->
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-0">Learn German with the face of a Kitten!</p>
+                        <footer class="blockquote-footer">An upcoming video by <cite title="Source Title">NuoViso.TV</cite></footer>
+                    </blockquote>
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-0">I bought the iMac Pro Review: Not a Trap!</p>
+                        <footer class="blockquote-footer">An upcoming video by <cite title="Source Title">Dying Light</cite></footer>
+                    </blockquote>
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-0">That you did THAT!</p>
+                        <footer class="blockquote-footer">An upcoming video by <cite title="Source Title">Nintendo</cite></footer>
+                    </blockquote>
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-0">TEACHING KARLIE KLOSS HOW TO LOOK LIKE A HOLIDAY PRESENT!</p>
+                        <footer class="blockquote-footer">An upcoming video by <cite title="Source Title">Late Night with Seth Meyers</cite></footer>
+                    </blockquote>
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-0">Post Malone reacts to unhealthy videos for kids!</p>
+                        <footer class="blockquote-footer">An upcoming video by <cite title="Source Title">Doug DeMuro</cite></footer>
+                    </blockquote>
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-0">Distraught father of 3 years, the spirit of future Christmas!</p>
+                        <footer class="blockquote-footer">An upcoming video by <cite title="Source Title">Toni Pirosa</cite></footer>
+                    </blockquote>
 
-             <h4>What should the next trending video be according to a Markov chain generator?</h4><p>
-                <!-- <blockquote class="blockquote text-center">
-                    <p class="mb-0">The Horrors of Flavored Water Inside The NBA - Chuck & Shaq Laugh at Rockets & Clippers Altercation</p>
-                    <footer class="blockquote-footer">An upcoming video by <cite title="Source Title">Studio C.</cite></footer>
-                </blockquote> -->
-                <!-- <blockquote class="blockquote text-center">
-                    <p class="mb-0">27 INGENIOUS STATIONERY HACKS THAT WILL CHANGE YOUR LIFE EASIER I SPEAK WITH HATERS!</p>
-                    <footer class="blockquote-footer">An upcoming video by <cite title="Source Title">Kidi Fun</cite></footer>
-                </blockquote> -->
-                <blockquote class="blockquote text-center">
-                    <p class="mb-0">Learn German with the face of a Kitten!</p>
-                    <footer class="blockquote-footer">An upcoming video by <cite title="Source Title">NuoViso.TV</cite></footer>
-                </blockquote>
-                <blockquote class="blockquote text-center">
-                    <p class="mb-0">I bought the iMac Pro Review: Not a Trap!</p>
-                    <footer class="blockquote-footer">An upcoming video by <cite title="Source Title">Dying Light</cite></footer>
-                </blockquote>
-                <blockquote class="blockquote text-center">
-                    <p class="mb-0">That you did THAT!</p>
-                    <footer class="blockquote-footer">An upcoming video by <cite title="Source Title">Nintendo</cite></footer>
-                </blockquote>
-                <blockquote class="blockquote text-center">
-                    <p class="mb-0">TEACHING KARLIE KLOSS HOW TO LOOK LIKE A HOLIDAY PRESENT!</p>
-                    <footer class="blockquote-footer">An upcoming video by <cite title="Source Title">Late Night with Seth Meyers</cite></footer>
-                </blockquote>
-                <blockquote class="blockquote text-center">
-                    <p class="mb-0">Post Malone reacts to unhealthy videos for kids!</p>
-                    <footer class="blockquote-footer">An upcoming video by <cite title="Source Title">Doug DeMuro</cite></footer>
-                </blockquote>
-                <blockquote class="blockquote text-center">
-                    <p class="mb-0">Distraught father of 3 years, the spirit of future Christmas!</p>
-                    <footer class="blockquote-footer">An upcoming video by <cite title="Source Title">Toni Pirosa</cite></footer>
-                </blockquote>
+                <p>
+                    While this started as something to do for fun, I found it interesting that certain things seemed to stick out.
+                    For example, many of the randomly generated titles were either completely capitalized or contained
+                    words that were completely capitalized; this suggests using all-caps may be a regular occurance
+                    in actual trending titles, since the generator picked up on this and replicated it.
+
+                    Similarly, almost every single time I ran my generation, at least one of the titles included an exclamation mark.
+                    Upon further inspection of this, I found that (of the <span class='number'>34,110</span> titles in my
+                    sampled dataset) <span class='number'>5,231</span> contained an exclamation mark; this accounts for
+                    approximately <span class='number'>15%</span> of the sampled titles.
+                    Out of curiousty, I also measured periods and question marks.
+                    Question marks appeared in approximately <span class='number'>7.5%</span> whereas periods made up about
+                    <span class='number'>12%</span>. Hence, exclamation points are one of the top-used normal punctuation.
+                </p>
+
+                <hr class='divideme'>
+
+                <figure class="full-width">
+                   <img src="./images/SentimentOverTime.png" class="img-fluid"/>
+                </figure>
+
 
                 <figure class="full-width">
                    <img src="./images/TagsWordCloud.png" class="img-fluid"/>
@@ -577,7 +602,7 @@
 		<div class="row">
 		  <div class="col-lg-8 mx-auto">
 			<h2>Question #4</h2>
-			<h3>When should you aim to publish your video?</h3>
+			<h3>When should you publish your video?</h3>
 			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
 
             <figure class="full-width">
