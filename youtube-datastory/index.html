@@ -480,28 +480,44 @@
                 Beyond that, let's examine whether words of a specific <i>sentiment</i> are more common in titles than others.
                 While making a title using these specific words will by no means guarantee trending status,
                 it will provide an insight on what <i>kinds</i> of words may increase your chances.
-                The results of this analysis are shown in Figure 6.
+
+            </p>
+
+            <p>
+                The results of this analysis are shown in Figure 6, in which the size of the font corresponds to the number of
+                times that specific word occurs in the trending
+                video's titles. The colour, in this case, is the algorithm-determined <i>sentiment</i> of that word:
+                red is <span class='emph'>positive</span> (a polarity score of greater than <span class='number'>0</span>),
+                dark gray is <span class='emph2'>negative</span> (polarity less than <span class='number'>0</span>), and
+                light gray is neutral. The library <span class='number'>TextBlob</span> was used for this sentiment score.
             </p>
 
              <figure class="full-width">
                  <img src="./images/TitleWordCloud.png" class="img-fluid"/>
                  <figcaption class="figure-caption">Figure 6</figcaption>
              </figure>
-
-             <p>
-                 In the above, the size of the font corresponds to the number of times that specific word occurs in the trending
-                 video's titles. The colour, in this case, is the algorithm-determined <i>sentiment</i> of that word:
-                 red is <span class='emph'>positive</span> (a polarity score of greater than <span class='number'>0</span>),
-                 dark gray is <span class='emph2'>negative</span> (polarity less than <span class='number'>0</span>), and
-                 light gray is neutral. The library <span class='number'>TextBlob</span> was used for this sentiment score.
              </p>
 
              <p>
-                 It is apparent right away that sentiment analysis is hardly a perfect tool.
+                 From Figure 6, it is apparent right away that this sentiment analysis is hardly a perfect tool.
                  Looking at Figure 6, we can see that some words were classified as either <span class='emph'>positive</span> or
                  <span class='emph2'>negative</span> in some strange ways.
                  For example, 'green' is labeled as <span class='emph2'>negative</span> despite the fact that colours, by nature,
-                 are fairly neutral. Perhaps this is due to its usage in idioms such as "green with envy" or 
+                 are fairly neutral. Perhaps this is due to its usage in idioms such as "green with envy" or the fact that it can
+                 be used to describe someone who looks ill.
+                 However, you could also consider 'green' in reference to environmental causes, which would instead mean
+                 this word should be positive.
+
+                 Similarly, 'live' is classified as <span class='emph'>positive</span>, most likely
+                 due to it being interpreted in reference to <i>being alive</i> rather than a live broadcast, which is more likely
+                 considering the context of this dataset.
+             </p>
+
+             <p>
+                 Regardless of the few odd sentiment assignments, there does not seem to be any specific trend to the sentiment of the words used.
+                 While there is more <span class='emph'>positivity</span> present in the top-used words than <span class='emph2'>negativity</span>,
+                 there is not enough of either to make a sound conclusion.
+                 Instead, we can see that titles are overwhelmingly dominated by neutral words.
              </p>
 
              <figure class="full-width">
