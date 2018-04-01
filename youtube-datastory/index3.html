@@ -585,13 +585,9 @@
 
                 <hr class='divideme'>
 
-                <!-- <p>
+                <p>
                     Now, while our sentiment analysis tool may be flawed (as described above in reference to Figure 6),
-                    I was interested in seeing whether or not there was a noticable trend in the overall sentiment of titles
-                    (rather than just the specific words).
-                    Since the number of neutral titles once again overpowered both the positive and negative titles,
-                    I chose to omit them from Figure 7 below.
-
+                    I was interested in seeing whether or not
                 </p>
 
                 <figure class="full-width">
@@ -599,124 +595,11 @@
                    <figcaption class="figure-caption">Figure 7</figcaption>
                 </figure>
 
-                <hr class='divideme'> -->
-
-                <p>
-                    While titles are meant to draw users in once they see your video,  tags are used
-                    to make sure that users see your video in the first place.
-                    The tags of a video are more hidden than the title, but they still contain
-                    useful information about the contents of the video itself.
-                    Since titles are more visible and meant to be a draw for viewers, they are not
-                    necessarily representative of the actual contents: for example, consider the
-                    clickbait titles above.
-                    Hence, I wanted to see if the top words used in titles were in any way related
-                    to the tags.
-                </p>
-
-                <p>
-                    I started by getting a general understanding of what words were most frequent
-                    in tags, similar to the way I did for titles in Figure 6.
-                    I did this by gathering the top <span class='number'>200</span> tags and mapping
-                    them to a word cloud, where the size of each word represents the number of
-                    times it appeared. The color mapping is the same as in Figure 6, where
-                    red is <span class='emph'>positive</span>, dark gray is <span class='emph2'>negative</span>,
-                    and light gray is neutral. The results can be seen in Figure 7.
-
-                </p>
 
                 <figure class="full-width">
                    <img src="./images/TagsWordCloud.png" class="img-fluid"/>
-                   <figcaption class="figure-caption">Figure 7</figcaption>
+                   <figcaption class="figure-caption">Figure 8</figcaption>
                 </figure>
-
-                <p>
-                    Since I was not able to translate this column due to my translation limitations,
-                    I used the unsampled dataset for this analysis.
-                    Interestingly, despite the fact that this dataset contains <span class='number'>78</span>
-                    unique languages, a majority of the top-used tags were in English.
-                    This reflects the findings of Question 2 above, where English was the majority
-                    language for <span class='number'>3</span> out of the <span class='number'>5</span>
-                    trending pages and the second-most popular in the other <span class='number'>2</span>.
-                </p>
-
-                <p>
-                    Once again, we can see some odd choices by the sentiment analysis tool.
-                    However, ignoring this, we can see that the breakdown of sentiment is very similar to
-                    that of the word usage in the titles.
-                    The top <span class='number'>200</span> words in titles were approximately
-                    <span class='number'>7.5%</span> positive, whereas in tags the top <span class='number'>200</span>
-                    were approximately <span class='number'>5.5%</span> positive.
-                    For words classified as negative, titles included approximately <span class='number'>3%</span>
-                    and tags about <span class='number'>1.5%</span>.
-                    Neutral words, in both subsets, were the majority.
-                </p>
-
-                <p>
-                    Now, out of the top <span class='number'>200</span> words in titles and the
-                    top <span class='number'>200</span> words in tags, <span class='number'>105</span>
-                    of them are the same (in the sampled dataset).
-                    So, in regards to my initial question, it seems that titles and tags are indeed
-                    very related. In fact, of the top <span class='number'>5</span> most-frequent words
-                    in both titles and tags, <span class='number'>3</span> of them were the same.
-                    The breakdown of these words is shown in Table 2.
-                </p>
-
-                <figure>
-                    <table class="table">
-                      <thead class='thead-light'>
-                        <tr>
-                          <th scope="col">#</th>
-                          <th scope="col">Word</th>
-                          <th scope="col">Frequency in Titles</th>
-                          <th scope="col">Frequency in Tags</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>2018</td>
-                          <td><span class='number'>2,145</span></td>
-                          <td><span class='number'>4,235</span></td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Video</td>
-                          <td><span class='number'>1,260</span></td>
-                          <td><span class='number'>4,365</span></td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>New</td>
-                          <td><span class='number'>1,226</span></td>
-                          <td><span class='number'>4,294</span></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <figcaption class="figure-caption">Table 2</figcaption>
-                </figure>
-                <p>
-                    Interestingly, the top-used word in tags was 'funny', which did not appear
-                    at all in the top <span class='number'>200</span> words used for titles.
-                    However, of the top <span class='number'>5</span> words in titles, every
-                    single one of them appeared in the top <span class='number'>200</span> tags.
-                    Despite this, there was no obvious trend in which words appeared in titles
-                    but not tags and vice versa.
-                    Words that were included in titles but <i>not</i> in tags include
-                    'death', 'commercial', and 'trailers'.
-                    On the other hand, some words included in tags but not in titles were
-                    'cats', 'education', and 'television'.
-                    From a manual overview of the non-overlapping words,
-                    titles included a larger variety of punctuation and numbers;
-                    however, other than that, there was not any drastic differences
-                    between the word choices for each.
-                </p>
-            <!-- <p>
-                Interestingly, many of the trending videos did not include a single tag: this is shown by the large
-                'None' on the right-hand-side of Figure 8.
-                So, this suggests that tags may not be a factor in determining whether or not a video makes
-                the trending page.
-            </p> -->
-
           </div>
         </div>
       </div>
@@ -729,84 +612,14 @@
 		  <div class="col-lg-8 mx-auto">
 			<h2>Question #4</h2>
 			<h3>When should you publish your video?</h3>
-			<p>
-                If your goal is to trend, is there a specific time and/or
-                day of the week that will help to achieve this?
-                That is the goal of this section of the data analysis.
-
-            </p>
-
-            <hr class='divideme'>
-
-            <p>
-                First, let's determine whether the day a video is published impacts
-                the likelihood of it trending.
-                For example, is there a certain weekday that is best to publish your video in order
-                for it to trend?
-                If we break down the number of videos by the weekday they made the trending page
-                as well as the weekday they were published, we may get an idea of whether or not
-                there is a relation between weekday and the chances of trending.
-                Not only that, but we may be able to draw a conclusion
-                on which day is best to publish your video if you wish to trend.
-                I began tackling some of these questions using Figure 8, which (for reference) uses the
-                <i>unsampled</i> dataset.
-            </p>
-
-            <figure class="full-width">
-                <img src="./images/DayOfTheWeekCount.png" class="img-fluid"/>
-                <figcaption class="figure-caption">Figure 8</figcaption>
-            </figure>
-
-            <p>
-                In Figure 8, we can see that the total number of <span class='emph'>trending</span> videos
-                on each weekday is fairly uniform. The only exceptions to this are Friday and
-                Sunday, which both have slightly fewer trending videos than the other <span class='number'>5</span>
-                weekdays. On the other hand, the number of videos <span class='emph2'>published</span> on each day
-                is slightly more erratic. Between Monday and Wednesday, the number of trending videos published on
-                these days goes down. Wednesday and Thursday have the fewest number of videos published on these
-                days total, with Wednesday being the worst of the two.
-                Then, the number trends upward to Friday and stays fairly consistent over the weekend.
-            </p>
-
-            <p>
-                From this, we can see that very few trending videos are <span class='emph2'>published</span> on Wednesday's and Thursday's
-                despite the fact that the number of <span class='emph'>trending</span> videos stays pretty stable regardless of the weekday.
-                That being said, this could be due to the fact that fewer videos in general are published
-                in the middle of the week. Unfortunately, since our data is limited to trending videos only,
-                we have no way of knowing how many videos <i>total</i> are published on each day of the week.
-                Hence, we do not have enough information to verify this or make any solid conclusions.
-                Still, it may be best to avoid these two days when deciding when to make your video live.
-            </p>
-
-            <hr class='divideme'>
-
-            <p>
-                Since it is difficult to determine the <i>likelihood</i> of trending depending on the
-                day a video was published, let's instead see if there is any correlation between the day a video
-                was published and how <i>long</i> it takes to make the trending page.
-                In order to calculate this value, which we will hereby call the <span class='emph2'>wait time</span>,
-                we took the day a video made the trending page and subtracted the day it was published.
-                We converted this value to the approximate number of days between the two dates in order
-                to simplify the output of this calculation.
-                Once we had this value for every single video in our unsampled dataset, we could proceed
-                with the rest of our analysis.
-            </p>
+			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
 
             <figure class="full-width">
                 <img src="./images/WaitTimeTrends.png" class="img-fluid"/>
-                <figcaption class="figure-caption">Figure 9</figcaption>
             </figure>
-
-            <p>
-                Figure 9 shows the breakdown of both the <span class='emph2'>average</span> and
-                <span class='emph'>mean</span> wait time for the videos
-                that trended on each day in our dataset. From this, we can see very clearly that
-                the
-            </p>
 
             <figure class="full-width">
                 <img src="./images/WaitTimeTrends-Median.png" class="img-fluid"/>
-                <figcaption class="figure-caption">Figure 10</figcaption>
             </figure>
           </div>
 		</div>
@@ -825,15 +638,14 @@
 	  </div>
 	</section>
 
-    <!-- <div class="wide" id='shane'></div> -->
+    <div class="wide" id='shane'></div>
 
 	<section id="q6">
 	  <div class="container">
 		<div class="row">
 		  <div class="col-lg-8 mx-auto">
 			<h2>Question #6</h2>
-            THIS IS DIFFERENT
-			<h3>What influences views?</h3>
+			<h3>Does a controversy affect your likelihood of trending?</h3>
 			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
 		  </div>
 		</div>
