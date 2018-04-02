@@ -567,7 +567,7 @@
                         <p class="mb-0">Distraught father of 3 years, the spirit of future Christmas!</p>
                         <footer class="blockquote-footer">An upcoming video by <cite title="Source Title">Toni Pirosa</cite></footer>
                     </blockquote>
-
+                </p>
                 <p>
                     While creating this generator was initially for fun rather than for performing some sort of in-depth analysis,
                     I found that certain patterns seemed to stick in these generated titles that could be reflective of the training dataset.
@@ -804,10 +804,75 @@
             <p>
                 Figure 9 shows the breakdown of both the <span class='emph2'>average</span> and
                 <span class='emph'>mean</span> wait time for the videos
-                that trended on each day in our dataset. From this, we can see very clearly that
+                that trended on each day in our dataset. From this, we can very clearly see that
                 the <span class='emph2'>average</span> is driven up by a small subset of videos,
                 since the <span class='emph'>mean</span> wait time is consistently much
-                lower than the average.
+                lower than the average. Despite this, it seems as though the <span class='emph2'>average</span>
+                is currently on a downward trend and, in fact, may be becoming more consistent overall.
+            </p>
+
+            <p>
+                From the start of the trending videos in 2017 until Febuary of 2018, there were
+                large dips and spikes in the average wait time. For example, the largest spike was on
+                January 31st, 2018, where <span class='number'>2</span> videos from 2007, a video from 2008,
+                and <span class='number'>3</span> videos from 2011 all made the trending page.
+                A few of the oldest videos that trended on this day are the following:
+            </p>
+
+            <p>
+               <blockquote class="blockquote text-center">
+                   <p class="mb-0">Jeffrey Lewis The Legend of The Fall</p>
+                   <footer class="blockquote-footer">
+                       A video published on 2007-03-05 by <cite title="Source Title">Dav Hum</cite>
+                       that made the trending page in Germany
+                   </footer>
+               </blockquote>
+               <blockquote class="blockquote text-center">
+                   <p class="mb-0">Bill is Dead The Fall</p>
+                   <footer class="blockquote-footer">
+                       A video published on 2007-06-25 by <cite title="Source Title">georgegargan</cite>
+                       that made the trending page in Germany
+                   </footer>
+               </blockquote>
+               <blockquote class="blockquote text-center">
+                   <p class="mb-0">Sega Game Gear Commercial "Creamed Spinach" </p>
+                   <footer class="blockquote-footer">
+                       A video published on 2012-12-11 by <cite title="Source Title">VideoGameAds</cite>
+                       that made the trending page in the US
+                   </footer>
+               </blockquote>
+            </p>
+
+            <p>
+                I noticed right away that, of the top <span class='number'>10</span> oldest videos that trended on January 31st,
+                <span class='number'>9</span> of them trended only in Germany. In fact,
+                <span class='number'>6</span> of them were music videos by a British band called
+                'The Fall,' and another was about the lead singer of this band, Mark E. Smith. When I looked into why this was the
+                case, I found that Smith passed away on January 24th, 2018, a mere <span class='number'>7</span> days before
+                [<a href='https://en.wikipedia.org/wiki/The_Fall_(band)'>source</a>].
+                Hence, this explains the mass resurfacing of these videos, many of which were over a decade old at the time of trending.
+            </p>
+
+            <p>
+                However, in the last <span class='number'>5</span> weeks, the intensity of the dips and spikes of
+                the average wait time seems to have smoothed out. Of course, it is entirely possible an extreme event
+                such as what happened on January 31st may drive this wait time up once again.
+                Still, the most recent weeks were much more stable than any other span of time in my dataset.
+                That being said, the <span class='emph2'>average</span> wait time does not seem to show
+                any significant evidence to suggest that publishing time impacts the time it takes a video to trend.
+            </p>
+
+            <hr class='divideme'>
+
+            <p>
+                While the <span class='emph2'>average</span> wait time did not tell as much about whether or not
+                publishing time impacts how long a video takes to trend, I was interested in finding out whether or not the
+                <span class='emph'>mean</span> wait time told a different story.
+                Since the <span class='emph2'>average</span> was so significantly higher than the <span class='emph'>mean</span>
+                in Figure 9 above, it was extremely difficult to draw any firm conclusions on the <span class='emph'>mean</span> without looking
+                at it seperately. Hence, in order to take a closer look at the <span class='emph'>mean</span> wait time,
+                Figure 10 is the same as Figure 10 but does not include the <span class='emph2'>average</span>;
+                in this graph, the days that are highlighted with a darker gray are the weekend.
             </p>
 
             <figure class="full-width">
@@ -816,9 +881,17 @@
             </figure>
 
             <p>
-                In order to get a closer look at the <span class='emph'>mean</span> wait time,
-                Figure 10 shows the same graph as Figure 9, but without including the
-                <span class='emph2'>average</span>. 
+                Right away, there seems to be a much more predictable pattern to the <span class='emph'>mean</span> wait time
+                in comparison to the <span class='emph2'>average</span>.
+                Quite consistently, the <span class='emph'>mean</span> wait time seems to dip in the middle of the week and
+                spike around the weekend. Of course, there are exceptions to this general pattern; once again,
+                January 31st shows a larger-than-normal spike in the wait time in the middle of the week.
+                Still, this pattern is consistent enough that I believe it is fair to draw conclusions from the <span class='emph'>mean</span>,
+                unlike with the <span class='emph2'>average</span> wait time.
+            </p>
+
+            <p>
+                Hence, according to Figure 10, it is best to 
             </p>
           </div>
 		</div>
