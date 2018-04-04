@@ -60,6 +60,10 @@ hr {
 	background-color: #cd322e;
 }
 
+a, a:hover {
+	color: #cc332d;
+}
+
 .divideme {
 	background-color: #e6e6e6 !important;
 	line-height: 1;

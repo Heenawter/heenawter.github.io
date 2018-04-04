@@ -954,29 +954,90 @@
 		<div class="row">
 		  <div class="col-lg-8 mx-auto">
 			<h2>Question #5</h2>
-			<h3>What should you avoid?</h3>
+			<h3>Do views actually matter?</h3>
             <p>
-                Now, our analysis thus far has focused on what you <i>should</i> do, and we have yet to really
-                discuss what you <i>shouldn't</i> do. Obviously, all of the videos on our dataset did indeed make
-                the trending page, so they've each done something right in that regard. That being said,
-                what are the worst performing videos overall and is there anything they have in common?
-                In this case, peformance refers to things such as the view count, the comment count, and
-                likes to dislikes ratio. If we explore the worst of the trending page, we may be able to
-                understand more of what goes into deciding whether or not a video will trend.
+                According to YouTube's own guidelines, there are <span class='number'>4</span> determining
+                factors that go into deciding whether or not a video will make the trending page
+                [<a href="https://support.google.com/youtube/answer/7239739?hl=en">source</a>]:
+                <ol>
+                    <li>The video is appealing to a wide range of viewers.</li>
+                    <li>The video is <i>not</i> misleading, clickbaity or sensational.</li>
+                    <li>The video captures the breadth of what’s happening on YouTube and in the world.</li>
+                    <li>The video is surprising or novel.</li>
+                </ol>
+                They claim the things that are considered when making this decision include, but are
+                not limited to, the number of views, how fast the views were accumulated, whether the views
+                come from external sources, as well as the age of the video
+                [<a href="https://support.google.com/youtube/answer/7239739?hl=en">source</a>].
+                Since views seem to be the focus of this decision process, let's explore some of the anomalies in this regard.
+                Along the way, we may be able to gather some information about what else goes into making a video trend.
             </p>
 
             <hr class='divideme'>
 
             <p>
                 First, let's take a look at the videos that performed the worst in regards to views.
-                Out of the unsampled dataset, there were <span class='number'>70</span> unique videos
-                with less than <span class='number'>1,000</span> views at the time of trending.
-                These videos trended in Germany, France, the UK, and the United States, but not a single
-                video on the Canadian trending page had less than <span class='number'>1,000</span> views.
+                We saw in Question 1 above that, in general, music videos perform the best when it
+                comes to total views, whereas the 'Shows', 'Nonprofits & Activism', and 'Travel & Events' categories
+                tend to have the fewest views overall. That being said, of the worst-viewed trending videos,
+                which category is the most prevelant? This might give us some information as to why such low-performing
+                videos made the trending page to begin with.
+                In order to find this out, I took the top <span class='number'>1,000</span>
+                videos with the lowest views from my unsampled dataset and counted how many fell into each category.
+            </p>
+
+            <figure class="full-width">
+                <img src="./images/WorstViewedCategories.png" class="img-fluid"/>
+                <figcaption class="figure-caption">Figure 11</figcaption>
+            </figure>
+
+            <p>
+                Figure 11 shows us that, out of the <span class='number'>1,000</span> lowest-viewed trending
+                videos, a majority of them fell under the <span class='emph'>People & Blogs</span> category.
+                However, the top <span class='number'>4</span> all came fairly close to tieing in this regard: the top
+                category was <span class='emph'>People & Blogs</span> with <span class='number'>166</span> videos, however,
+                next in line was <span class='emph2'>Sports</span> with <span class='number'>162</span>, a difference of
+                only <span class='number'>4</span> videos. In third place was
+                <span class='emph2'>Entertainment</span> with <span class='number'>148</span>,
+                and the fourth-most unviewed category was <span class='emph2'>News & Politics</span> with <span class='number'>145</span>.
+                The remaining categories all had <span class='number'>72</span> or less videos total, which shows
+                us that these top <span class='number'>4</span> all perform <i>much</i> worse in general when compared to the other categories.
             </p>
 
             <p>
-                The videos with the least views (at the time of trending) on each trending page are as follows:
+                The results of this analysis surprised me. When I originally tried this and took only the top
+                <span class='number'>100</span> lowest-viewed trending videos, I found that <span class='emph2'>News & Politics</span>
+                was, by far, the most common category. This made sense to me, since it YouTube would want to
+                push breaking news to the trending page <i>before</i> it gets views; once a news video is seen
+                by enough people, chances are that specific story is already out-of-date. So, making news videos trend regardless of
+                views makes sense. However, as soon as changed this number and looked at the <span class='number'>1,000</span> videos instead, this changed:
+                <span class='emph'>People & Blogs</span> now had the most unviewed trending videos.
+            </p>
+
+            <p>
+                I cannot think of a clear justification as to why this might be the case.
+                Unlike with <span class='emph2'>News & Politics</span>, it does not seem as though videos in the
+                <span class='emph'>People & Blogs</span> category are time-sensitive.
+                One possible explanation I came up with was that YouTube has certain creators that
+                they push to the trending page regardless of views.
+                However, upon further exploration of this possibility, this theory was unsupported.
+                There was no single creator that seemed to be overepresented in this category, or in any other
+                for that matter. The same justification that exists for <span class='emph2'>News & Politics</span>
+                can be applied to <span class='emph2'>Sports</span>, but the justification for <span class='emph'>People & Blogs</span>
+                as well as <span class='emph2'>Entertainment</span> leaves me stumped.
+                Let's explore what else goes into a trending video, and see if we can gather more insight.
+            </p>
+
+            <hr class='divideme'>
+
+            <p>
+                Now, out of the unsampled dataset, there were <span class='number'>70</span> unique videos
+                with less than <span class='number'>1,000</span> views at the time of trending.
+                These videos trended in Germany, France, the UK, and the United States, but interestingly not a single
+                one of them made the trending page in Canada. The lowest-viewed Canadian video,
+                on the other hand, had <i>exactly</i> <span class='number'>1,000</span> views at the time of trending.
+
+                The lowest-viewed videos on each trending page are displayed in Table 3 below.
             </p>
 
             <figure>
@@ -987,8 +1048,8 @@
                       <th scope="col">Country</th>
                       <th scope="col">Video Title</th>
                       <th scope="col">Views</th>
-                      <th scope="col">Published</th>
-                      <th scope="col">Trended</th>
+                      <th scope="col">Category</th>
+                      <th scope="col">Time to Trend</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -998,17 +1059,17 @@
                       <td>Laurent Baffie - Best of valves # 105
                           <i>[this video is unavailable]</i></td>
                       <td><span class='number'>223</span></td>
-                      <td>2018-02-15</td>
-                      <td>2018-02-15</td>
+                      <td>Entertainment</td>
+                       <td>~ 1 Day</td>
                     </tr>
                     <tr>
                       <th scope="row">2</th>
                       <td>Germany</td>
-                      <td>The press conference before the match 1. FC Heidenheim - VfL Bochum 1848
+                      <td>The press conference before the match 1. FC Heidenheim
                           [<a href="https://www.youtube.com/watch?v=ew6_lYiGWo4">link</a>]</td>
                       <td><span class='number'>518</span></td>
-                      <td>2018-02-15</td>
-                      <td>2018-02-15</td>
+                      <td>Sports</td>
+                       <td>~ 1 Day</td>
                     </tr>
                     <tr>
                       <th scope="row">3</th>
@@ -1016,8 +1077,8 @@
                       <td>1 dead, others injured after Ky. school shooting
                           [<a href="https://www.youtube.com/watch?v=y6KYFcta4SE">link</a>]</td>
                       <td><span class='number'>549</span></td>
-                      <td>2018-01-23</td>
-                      <td>2018-01-26</td>
+                      <td>News & Politics</td>
+                      <td>~ 3 Days</td>
                     </tr>
                     <tr>
                       <th scope="row">3</th>
@@ -1025,8 +1086,8 @@
                       <td>Mountain Bikers Worried About Military Land Being Fenced Off
                           [<a href="https://www.youtube.com/watch?v=n26wtR-OFr8">link</a>]</td>
                       <td><span class='number'>851</span></td>
-                      <td>2017-11-27</td>
-                      <td>2017-12-01</td>
+                      <td>News & Politics</td>
+                      <td>~ 4 Days</td>
                     </tr>
                     <tr>
                       <th scope="row">3</th>
@@ -1035,13 +1096,20 @@
                           [<a href="https://www.youtube.com/watch?v=_QPStIydtgg">link</a>]
                       </td>
                       <td><span class='number'>1,000</span></td>
-                      <td>2018-02-14</td>
-                      <td>2018-02-14</td>
+                      <td>News & Politics</td>
+                      <td>~ 1 Day</td>
                     </tr>
                   </tbody>
                 </table>
                 <figcaption class="figure-caption">Table 3</figcaption>
             </figure>
+
+            <hr class='divideme'>
+
+            <p>
+                Now, let's see if there is anything
+            </p>
+
 		  </div>
 		</div>
 	  </div>
@@ -1052,8 +1120,21 @@
 		<div class="row">
 		  <div class="col-lg-8 mx-auto">
 			<h2>Question #6</h2>
-			<h3>Do views actually matter?</h3>
-			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+			<h3>What makes a controversial video?</h3>
+            <p>
+                Now, our analysis thus far has focused on what you <i>should</i> do, and we have yet to really
+                discuss what you <i>shouldn't</i> do. Obviously, all of the videos on our dataset did indeed make
+                the trending page, so they've each done something right in that regard. That being said,
+                what are the worst performing videos overall and is there anything they have in common?
+                In this case, peformance refers to things such as the view count, the comment count, and
+                likes to dislikes ratio. If we explore the worst of the trending page, we may be able to
+                understand more of what goes into deciding whether or not a video will trend.
+            </p>
+
+            <figure class="full-width">
+                <img src="./images/MostLikedAndDisliked.png" class="img-fluid"/>
+                <figcaption class="figure-caption">Figure 12</figcaption>
+            </figure>
 		  </div>
 		</div>
 	  </div>
