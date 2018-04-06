@@ -239,6 +239,17 @@
                 user interaction coming from dislikes) or <span class='emph2'>'Comedy'</span> (which has only <span class='number'>2.7%</span>).
             </p>
 
+            <!-- <p>
+                It is interesting to see that, regardless of the category, the number of likes makes up the <i>majority</i> of
+                the user interaction score. Out of all categories, however, likes in <span class='emph'>Music</span> make up the
+                highest percentage overall.
+                However, this makes sense. In general, videos tend to have a more positive than negative reaction,
+                and leaving a like is a lot less work
+                than writing a comment. Hence, it makes sense that a majority of user interaction comes from likes.
+                That being said, some categories (such as <span class='emph2'>'Entertainment'</span>)
+                have more of their interaction come from comments versus dislikes.
+            </p> -->
+
           </div>
 		</div>
 	  </div>
@@ -762,8 +773,9 @@
                 <i>unsampled</i> dataset.
             </p>
 
-            <figure class="full-width">
-                <img src="./images/DayOfTheWeekCount.png" class="img-fluid"/>
+            <figure class="cf full-width">
+                <img src="./images/DayOfTheWeekCount_Hover.png" class="img-fluid bottom"/>
+                <img src="./images/DayOfTheWeekCount.png" class="img-fluid top"/>
                 <figcaption class="figure-caption">Figure 8</figcaption>
             </figure>
 
@@ -802,8 +814,9 @@
                 with the rest of our analysis.
             </p>
 
-            <figure class="full-width">
-                <img src="./images/WaitTimeTrends.png" class="img-fluid"/>
+            <figure class="cf full-width">
+                <img src="./images/WaitTimeTrends_Hover.png" class="img-fluid bottom"/>
+                <img src="./images/WaitTimeTrends.png" class="img-fluid top"/>
                 <figcaption class="figure-caption">Figure 9</figcaption>
             </figure>
 
@@ -881,8 +894,9 @@
                 in this graph, the days that are highlighted with a darker gray are the weekend.
             </p>
 
-            <figure class="full-width">
-                <img src="./images/WaitTimeTrends-Median.png" class="img-fluid"/>
+            <figure class="cf full-width">
+                <img src="./images/WaitTimeTrends-Median_Hover.png" class="img-fluid bottom"/>
+                <img src="./images/WaitTimeTrends-Median.png" class="img-fluid top"/>
                 <figcaption class="figure-caption">Figure 10</figcaption>
             </figure>
 
@@ -993,8 +1007,9 @@
                 videos with the lowest views from my unsampled dataset and counted how many fell into each category.
             </p>
 
-            <figure class="full-width">
-                <img src="./images/WorstViewedCategories.png" class="img-fluid"/>
+            <figure class="cf full-width">
+                <img src="./images/WorstViewedCategories_Hover.png" class="img-fluid bottom"/>
+                <img src="./images/WorstViewedCategories.png" class="img-fluid top"/>
                 <figcaption class="figure-caption">Figure 11</figcaption>
             </figure>
 
@@ -1038,13 +1053,13 @@
             <hr class='divideme'>
 
             <p>
-                Now, out of the unsampled dataset, there were <span class='number'>70</span> unique videos
+                As an aside, let's look at the worst-viewed videos on each country's trending page.
+                Out of the unsampled dataset, there were <span class='number'>70</span> unique videos
                 with less than <span class='number'>1,000</span> views at the time of trending.
                 These videos trended in Germany, France, the UK, and the United States, but interestingly not a single
                 one of them made the trending page in Canada. The lowest-viewed Canadian video,
                 on the other hand, had <i>exactly</i> <span class='number'>1,000</span> views at the time of trending.
-
-                The lowest-viewed videos on each trending page are displayed in Table 3 below.
+                The lowest viewed videos (at the time of trending) for each country are displayed in Table 3.
             </p>
 
             <figure>
@@ -1111,6 +1126,16 @@
                 <figcaption class="figure-caption">Table 3</figcaption>
             </figure>
 
+            <p>
+                Now, a majority (<span class='number'>3</span> out of <span class='number'>5</span>) of these videos
+                comes from the <span class='emph2'>'News & Politics'</span> category.
+                This goes along with our justification above, since news tends to be more time
+                sensitive than any other category on the trending page.
+                That being said, we know that this does not hold once we look at a larger subset of low-viewed
+                videos. Still, it is interesting to see exactly what types of videos are pushed to the trending page
+                for each country.
+            </p>
+
             <hr class='divideme'>
 
             <p>
@@ -1137,10 +1162,7 @@
                 Now, our analysis thus far has focused on what you <i>should</i> do, and we have yet to really
                 discuss what you <i>shouldn't</i> do. Obviously, all of the videos on our dataset did indeed make
                 the trending page, so they've each done something right in that regard. That being said,
-                what are the worst performing videos overall and is there anything they have in common?
-                In this case, peformance refers to things such as the view count, the comment count, and
-                likes to dislikes ratio. If we explore the worst of the trending page, we may be able to
-                understand more of what goes into deciding whether or not a video will trend.
+                unpopular or contraversial videos bring in views, so they c
             </p>
 
             <figure class="full-width">

@@ -119,6 +119,15 @@ a, a:hover {
   transition: opacity 1s ease-in-out;
 }
 
+::selection {
+  background: #cd322e;
+  color: white;
+}
+::-moz-selection {
+  background: #cd322e;
+  color: white;
+}
+
 .cf img.top:hover {
   opacity:0;
 }
