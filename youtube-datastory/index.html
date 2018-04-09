@@ -71,10 +71,23 @@
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <h2>What is the goal of this data story?</h2>
-            <p> The goal of this data story is to t
+            <p class='lead'> Have you ever wondered what it takes to make the trending page of YouTube?
+                The goal of this data story is to answer this question as best as possible.
             </p>
-            <p> I have <b>two</b> versions of the same dataset to consider: one which contains every single video that has trended, and one that has been sampled.
-                The </p>
+            <p>
+                In order to accomplish this, I have two versions of the same dataset to consider: one which contains every
+                single video that has trended since <span class='emph2'>November 14th, 2017</span> and a sampled
+                version. The sampled version reduces the number of rows from <span class='number'>116,738</span> to
+                <span class='number'>34,110</span>, and was created in order to accommodate for translation limitations.
+                Specifically, in order to perform parts of the analysis to follow, the title column needed to be translated;
+                since the Google API that was used for this task had a set character limit, the dataset had to be sampled in
+                order for this to happen.
+                In each question below, it will be clearly stated which dataset was used in order to perform the analysis.
+            </p>
+            <p>
+                For each figure that follows, if the name includes an asterisk (*), you are able to hover over the image
+                in order to get an annotated or different version of that same figure.
+            </p>
           </div>
         </div>
       </div>
@@ -1156,13 +1169,90 @@
                 Now, our analysis thus far has focused on what you <i>should</i> do, and we have yet to really
                 discuss what you <i>shouldn't</i> do. Obviously, all of the videos on our dataset did indeed make
                 the trending page, so they've each done something right in that regard. That being said,
-                unpopular or contraversial videos bring in views, so they c
+                while unpopular or contraversial videos may bring in views, they are not necessarily the best
+                if you wish to recieve positive feedback. So, let's look at what topics you should <span class='emph2'>avoid</span>
+                when making videos.
             </p>
 
-            <figure class="full-width">
-                <img src="./images/MostLikedAndDisliked.png" class="img-fluid"/>
-                <figcaption class="figure-caption">Figure 13</figcaption>
+            <hr class='divideme'>
+
+            <p>
+                First, let's take a look at the most positively and negatively received trending videos.
+                To do this analysis, we first determined the breakdown of likes to dislikes by normalizing these
+                two columns; hence, rather than having the actual <i>number</i> of likes and dislikes, we instead had the
+                percentage breakdown of likes to dislikes for each video. This was done on the sampled dataset, since we inteded to perform
+                a similar title analysis as shown in Question 3.
+            </p>
+
+            <p>
+                Once we had the likes to dislikes ratio, we filtered out the videos with less than <span class='number'>50,000</span>
+                views. Since some videos made the trending page despite having limited views, these seemed to skew our ratios since
+                a single dislike was weighted much heavier when there were fewer likes to balance it out. Since our assumption was
+                that a contraversial video would receive quite a few views, and in order to accomodate for this unbalance, we
+                chose to remove any relatively unviewed videos from our consideration.
+            </p>
+
+            <figure class="cf full-width">
+                <img src="./images/MostLikedAndDisliked_Hover.png" class="img-fluid bottom"/>
+                <img src="./images/MostLikedAndDisliked.png" class="img-fluid top"/>
+                <figcaption class="figure-caption">Figure 13*</figcaption>
             </figure>
+
+            <p>
+                The breakdown of words used in the titles of the most and least contraversial videos can be seen in Figure 13.
+                The figure on the left represents the most-used words for the top <span class='number'>1,000</span> videos with the highest
+                <span class='emph'>likes</span> to dislikes ratio, whereas the one on the right shows the breakdown of words for the
+                <span class='number'>1,000</span> vidoes with the highest <span class='emph2'>dislikes</span> to likes ratio.
+                For the sake of this analysis, we will consider the videos represented on the right to be those that are
+                <i>contraversial</i>.
+            </p>
+
+            <p>
+                This suggests that videos about <span class='emph2'>Roy Moore</span> and the Moore Campaign are some of the most
+                contraversial on the trending page. The chairman of the FCC, <span class='emph2'>Ajit Pai</span>, is also a fairly
+                contraversial topic. I found it interesting that the phrase 'Official Trailer' made this list; however, upon
+                further inspection, I found that this was most likely influenced by the trailer for rebooted television show
+                'ReBoot: The Guardian Code' [<a href='https://www.youtube.com/watch?v=l8B5dqjsZUs'>source</a>]. While other
+                trailers also accounted for this addition, this was easily the most contraversial trailer on the list.
+                We can see multiple phrases related to this specific trailer in this figure, including 'Guardian Code' and
+                'Code Official.'
+            </p>
+
+            <p>
+                On the other hand, some of the <i>least</i> contraversial video topics are BTS (a Korean pop band), Christmas, and
+                Roberto Carlos. Interestingly, 'Trailer' also makes this word list, although at a much lower frequency than
+                'Official Trailer' for the contraversial videos. Hence, if you want to avoid contraversies, perhaps just stick
+                to vidoes about dogs, yoga, cats, and other topics present in the left figure.
+            </p>
+
+            <hr class='divideme'>
+
+            <p>
+                Now that we know what topics make a contraversial video, let's see if people tend to comment more on videos
+                that make this list. I would expect this to be true, since my belief is that people would have more drive to
+                comment on something they disagree with versus something they agree with; however, let's test this hypothesis.
+                In order to do this, we plotted the dislikes ratio versus the number of comments, where the size of each
+                point corresponds to the number of views that specific video got.
+            </p>
+
+            <figure class="cf full-width">
+                <img src="./images/Dislikes_Hover.png" class="img-fluid bottom"/>
+                <img src="./images/Dislikes.png" class="img-fluid top"/>
+                <figcaption class="figure-caption">Figure 14*</figcaption>
+            </figure>
+
+            <p>
+                From Figure 14, it seems as though the <i>opposite</i> is true (excluding a few outliers): videos with a more
+                positive reaction tend to receive more comments. However, it is worth noticing that the most contraversial
+                videos also recieved fewer views in general, which would explain why they also received fewer comments.
+            </p>
+
+            <p>
+                That being said, let's look at some of the outliers in Figure 14. Two of them were created by the YouTuber
+                Logan Paul, who recently made mainstream news after publishing a video that included the uncensored body of a suicide victim.
+                Both of these outlier videos are related to this contraversy: 'So Sorry' and 'Suicide: Be Here Tomorrow.'
+            </p>
+
 		  </div>
 		</div>
 	  </div>
